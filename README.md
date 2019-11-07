@@ -45,8 +45,6 @@ El objetivo principal es alcanzar la meta en el menor tiempo posible, superando 
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas2.png)
 
-(Bocetos del Punto de control y la mecánica de salto)
-
 __Herramientas__ Servirán como moneda en el juego, se podrán recoger en los distintos niveles y permitirán cambiar la apariencia del personaje.
 
 __Enemigos__ En caso de que toquen tu cabeza o tu tronco volverás al punto de control. Para derrotarlos, debes acertarles con tus extremidades.
@@ -74,7 +72,6 @@ __Personajes__
 Bocetos:
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
-(Bocetos del Personaje)
 
 
 ### Música y Sonido
