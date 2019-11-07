@@ -66,7 +66,9 @@ La puntuación obtenida en un nivel dependerá del tiempo que emplees en superar
 ...
 
 __Personajes__
-...
+Puppet Master: Será tu maestro en el juego. Su método de enseñanza es un tanto peculiar...
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Puppet%20Master.png)
+
 
 ### Estética
 Bocetos:
