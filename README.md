@@ -31,7 +31,7 @@ Versión 0.1
 [Redes Sociales](https://github.com/GlassBeardTeam/GoodProductSorter/blob/master/README.md#redes-sociales)
 
 ## Pitch
-__Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marioneta accionando sus articulaciones. 
+__Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marioneta accionando sus articulaciones para desplazarte y golpear a enemigos. 
 ### Propósito y público objetivo
 El propósito es crear un juego de plataformas con mecánicas innovadoras. 
 ### Plataforma y monetización
@@ -41,7 +41,9 @@ El juego estará adaptado para cualquier dispositivo con navegador Chrome o Fire
 La mecánica principal del juego consiste en contraer y relajar las articulaciones de la marioneta para desplazarte.
 
 
-![Error al cargar la imagen]()
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas2.png)
+
+(Bocetos del Punto de control y la mecánica de salto)
 ### Controles
 La marioneta se controla con 3 botones:
 
@@ -62,7 +64,10 @@ __Personajes__
 ...
 
 ### Estética
+Bocetos:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
+(Bocetos del Personaje)
 
 
 ### Música y Sonido
