@@ -38,9 +38,13 @@ Dicho juego irá orientado a jugadores habituales del género que busquen nuevas
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
 Monetización: La gestión de la monetización se realizará en varias fases:
+
 Fase 1: Micromecenazgo durante el desarrollo. Se  realizará una campaña de crowdfunding con diferentes niveles de apoyo y sus respectivas recompensas, como poder acceder a la versión alpha del videojuego o introducir su nombre en los créditos.
+
 Fase 2: Lanzamiento de la versión alpha para los que hayan apoyado el juego.
+
 Fase 3: Venta del juego completo en diferentes plataformas digitales de distribución de videojuegos. (Modo plataformas + multijugador)
+
 Fase 4: Lanzamiento de acceso a multijugador de forma gratuita y Venta de cosméticos adicionales.
 ## Mecánicas
 La mecánica principal del juego consiste en contraer y relajar las articulaciones de la marioneta para desplazarse. 
