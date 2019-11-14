@@ -41,7 +41,7 @@ Se distribuirá una versión inicial en plataformas digitales, como Steam, Itch.
 Posteriormente se tratará de llevar a cabo una campaña de micromecenazgo para ampliar el videojuego con nuevas funcionalidades, como el modo multijugador.
 Dicha campaña irá evolucionando en varias fases:
 
-Fase 1: Micromecenazgo durante el desarrollo. Se  realizará una campaña de crowdfunding con diferentes niveles de apoyo y sus respectivas recompensas, como poder acceder a la versión alpha del videojuego o aparecer en los créditos del juego.
+Fase 1: Campaña de crowdfunding con diferentes niveles de apoyo y sus respectivas recompensas, como poder acceder a la versión alpha del videojuego o aparecer en los créditos del juego.
 
 Fase 2: Lanzamiento de la versión alpha para los que hayan apoyado el juego.
 
