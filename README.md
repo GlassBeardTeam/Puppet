@@ -36,7 +36,10 @@ __Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marione
 El propósito es crear un juego de plataformas con mecánicas innovadoras, orientado a jugadores habituales del género que busquen nuevas formas de jugar.
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
-La monetización irá evolucionando en varias fases:
+
+Se distribuirá una versión inicial en plataformas digitales, como Steam, Itch.io o Humble Bundle, y se irá actualizando con cosméticos cada cierto tiempo.
+Posteriormente se tratará de llevar a cabo una campaña de micromecenazgo para ampliar el videojuego con nuevas funcionalidades, como el modo multijugador.
+Dicha campaña irá evolucionando en varias fases:
 
 Fase 1: Micromecenazgo durante el desarrollo. Se  realizará una campaña de crowdfunding con diferentes niveles de apoyo y sus respectivas recompensas, como poder acceder a la versión alpha del videojuego o aparecer en los créditos del juego.
 
@@ -95,9 +98,12 @@ __Personajes__
 
 
 ### Estética
+Se ha elegido una estética cartoon, simulando recortes de cartón, con pegatinas desgastadas que se pueden ir intercambiando. Coge inspiración en los teatros de títeres para niños y niñas y en las manualidades que podrían hacer éstos y éstas en el colegio.
+
 Bocetos:
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
+![Error al cargar la imagen]()
 
 
 ### Música y Sonido
