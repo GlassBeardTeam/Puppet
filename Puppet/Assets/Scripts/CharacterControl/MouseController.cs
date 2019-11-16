@@ -12,6 +12,7 @@ public class MouseController : MonoBehaviour
     public Vector2 legsAngles;
     public Vector2 footsAngles;
     [Header("Flexed Angles")]
+    public Vector2 armFlexedAngles;
     public Vector2 forearmFlexedAngles;
 
     private GameObject body, torso, head, rightArm, rightHand, leftArm, leftHand, rightLeg, rightFoot, leftLeg, leftFoot;
@@ -98,21 +99,31 @@ public class MouseController : MonoBehaviour
             handDir = new Vector2(1, 1);
             if(xAxis > 0.0f)
             {
-                rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
-                rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
-                Debug.Log("angulos minimo y maximo: " + forearmFlexedAngles);
+                setJointMovility(rightArm.GetComponent<HingeJoint2D>(),
+                                    armFlexedAngles.x, armFlexedAngles.y);
                 setJointMovility(rightHand.GetComponent<HingeJoint2D>(),
                                     forearmFlexedAngles.x, forearmFlexedAngles.y);
+
+                rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
+                rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
+                
             }
             else if(xAxis < 0.0f)
             {
+                setJointMovility(leftHand.GetComponent<HingeJoint2D>(),
+                          -forearmFlexedAngles.x, -forearmFlexedAngles.y);
+                setJointMovility(leftArm.GetComponent<HingeJoint2D>(),
+                          -armFlexedAngles.x, -armFlexedAngles.y);
+
                 leftArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 leftHand.GetComponent<Rigidbody2D>().AddForce(handDir* armSpeed);
-                setJointMovility(leftHand.GetComponent<HingeJoint2D>(),
-                                    -forearmFlexedAngles.x, -forearmFlexedAngles.y);
+      
             }
             else
             {
+                setJointMovility(rightArm.GetComponent<HingeJoint2D>(), -armAngles.x, -armAngles.y);
+                setJointMovility(leftArm.GetComponent<HingeJoint2D>(), armAngles.x, armAngles.y);
+
                 setJointMovility(rightHand.GetComponent<HingeJoint2D>(), foreArmsAngles.x, foreArmsAngles.y);
                 setJointMovility(leftHand.GetComponent<HingeJoint2D>(), foreArmsAngles.x, foreArmsAngles.y);
             }

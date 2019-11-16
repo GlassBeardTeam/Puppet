@@ -279,6 +279,7 @@ MonoBehaviour:
   foreArmsAngles: {x: 0, y: 0}
   legsAngles: {x: 0, y: 0}
   footsAngles: {x: 0, y: 0}
+  armFlexedAngles: {x: 0, y: 0}
   forearmFlexedAngles: {x: 0, y: 0}
 --- !u!1 &519420028
 GameObject:
@@ -716,6 +717,7 @@ MonoBehaviour:
   foreArmsAngles: {x: 0, y: 0}
   legsAngles: {x: 0, y: 0}
   footsAngles: {x: 0, y: 0}
+  armFlexedAngles: {x: 0, y: 0}
   forearmFlexedAngles: {x: 0, y: 0}
 --- !u!1 &1038228934
 GameObject:
@@ -1599,6 +1601,7 @@ MonoBehaviour:
   foreArmsAngles: {x: 0, y: 0}
   legsAngles: {x: 0, y: 0}
   footsAngles: {x: 0, y: 0}
+  armFlexedAngles: {x: 0, y: 0}
   forearmFlexedAngles: {x: 0, y: 0}
 --- !u!70 &1885301926
 CapsuleCollider2D:
@@ -1997,6 +2000,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376077660229853837, guid: 5ab753289215c544ca9ba86b7e86164d,
+        type: 3}
+      propertyPath: forearmFlexedAngles.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376077660229853837, guid: 5ab753289215c544ca9ba86b7e86164d,
+        type: 3}
+      propertyPath: forearmFlexedAngles.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376077660229853837, guid: 5ab753289215c544ca9ba86b7e86164d,
+        type: 3}
+      propertyPath: armFlexedAngles.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376077660229853837, guid: 5ab753289215c544ca9ba86b7e86164d,
+        type: 3}
+      propertyPath: armFlexedAngles.y
+      value: 135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab753289215c544ca9ba86b7e86164d, type: 3}
