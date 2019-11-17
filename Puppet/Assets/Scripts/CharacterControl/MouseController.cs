@@ -99,28 +99,34 @@ public class MouseController : MonoBehaviour
             handDir = new Vector2(1, 1);
             if(xAxis > 0.0f)
             {
+                //Set de angulos flexionados
                 setJointMovility(rightArm.GetComponent<HingeJoint2D>(),
                                     armFlexedAngles.x, armFlexedAngles.y);
                 setJointMovility(rightHand.GetComponent<HingeJoint2D>(),
                                     forearmFlexedAngles.x, forearmFlexedAngles.y);
 
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), -90, -180);
+                //Set de fuerzas
                 rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
-                
             }
             else if(xAxis < 0.0f)
             {
+                //Set de angulos flexionados
                 setJointMovility(leftHand.GetComponent<HingeJoint2D>(),
                           -forearmFlexedAngles.x, -forearmFlexedAngles.y);
                 setJointMovility(leftArm.GetComponent<HingeJoint2D>(),
                           -armFlexedAngles.x, -armFlexedAngles.y);
-
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), -90, -180);
+                //Set de fuerzas
                 leftArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 leftHand.GetComponent<Rigidbody2D>().AddForce(handDir* armSpeed);
-      
+
             }
             else
             {
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), 0, 359);
+
                 setJointMovility(rightArm.GetComponent<HingeJoint2D>(), -armAngles.x, -armAngles.y);
                 setJointMovility(leftArm.GetComponent<HingeJoint2D>(), armAngles.x, armAngles.y);
 
