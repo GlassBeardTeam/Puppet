@@ -18,9 +18,9 @@ Versión 0.1
   * [Plataforma y monetización](https://github.com/GlassBeardTeam/Puppet#plataforma-y-monetizaci%C3%B3n)
   
 [Mecánicas](https://github.com/GlassBeardTeam/Puppet#mec%C3%A1nicas)
-  * [Puntuación](https://github.com/GlassBeardTeam/Puppet#puntuaci%C3%B3n)
   * [Controles](https://github.com/GlassBeardTeam/Puppet#controles)
-  
+  * [Puntuación](https://github.com/GlassBeardTeam/Puppet#puntuaci%C3%B3n)
+
 [Interfaz](https://github.com/GlassBeardTeam/Puppet#interfaz)
 
 [Arte](https://github.com/GlassBeardTeam/Puppet#arte)
