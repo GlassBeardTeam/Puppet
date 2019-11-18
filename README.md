@@ -33,7 +33,7 @@ Versión 0.1
 ## Pitch
 __Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marioneta, accionando sus articulaciones para desplazarte y golpear a enemigos. 
 ### Propósito y público objetivo
-El propósito es crear un juego de plataformas con mecánicas innovadoras, orientado a jugadores habituales del género que busquen nuevas formas de jugar.
+El propósito es crear un juego de plataformas con mecánicas innovadoras, orientado a jugadores habituales del género que busquen nuevas formas de jugar. Además se podrá personalizar la marioneta para distinguirla de las demás.
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
 
@@ -82,6 +82,19 @@ Los botones podrían controlar otras articulaciones en caso de que se añadan nu
 La puntuación obtenida en un nivel dependerá del tiempo que tardes en completarlo y del porcentaje de coleccionables que consigas en el mismo.
 
 ## Interfaz
+__Menú principal__
+* Aventura
+  * Selección de Nivel
+    * Juego
+  * Taller: Personalización de la marioneta
+* Opciones: Volumen de sonidos, música, idioma.
+* Contacto
+
+__Juego__
+* Nivel
+* Cronómetro
+* Engranajes conseguidos
+* Bobinas de hilo conseguidas
 
 
 ## Arte
