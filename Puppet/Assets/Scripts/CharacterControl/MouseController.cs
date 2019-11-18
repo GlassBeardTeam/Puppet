@@ -6,14 +6,17 @@ public class MouseController : MonoBehaviour
 {
     public float force;
     public float armSpeed;
+    public Vector2 torsoAngles;
     public Vector2 headAngles;
     public Vector2 armAngles;
     public Vector2 foreArmsAngles;
     public Vector2 legsAngles;
     public Vector2 footsAngles;
     [Header("Flexed Angles")]
+    public Vector2 torsoFlexedAngles;
     public Vector2 armFlexedAngles;
     public Vector2 forearmFlexedAngles;
+
 
     private GameObject body, torso, head, rightArm, rightHand, leftArm, leftHand, rightLeg, rightFoot, leftLeg, leftFoot;
     // Start is called before the first frame update
@@ -35,6 +38,7 @@ public class MouseController : MonoBehaviour
         //DebugBodyParts();
         SetAllJointsMovility();
         StartCoroutine(CharacterControlCoroutine());
+        SetFeetWeights(100);
     }
 
     void DebugBodyParts()
@@ -52,8 +56,17 @@ public class MouseController : MonoBehaviour
         Debug.Log("leftFoot: " + leftFoot.name);
     }
 
+    void SetFeetWeights(float weight)
+    {
+        //Anchor Feet
+        leftFoot.GetComponent<Rigidbody2D>().mass = weight;
+        rightFoot.GetComponent<Rigidbody2D>().mass = weight;
+    }
+
     void SetAllJointsMovility()
     {
+        //Torso
+        setJointMovility(torso.GetComponent<HingeJoint2D>(), torsoAngles.x, torsoAngles.y);
         //Head
         setJointMovility(head.GetComponent<HingeJoint2D>(), headAngles.x, headAngles.y);
         //Arms and hands
@@ -62,10 +75,10 @@ public class MouseController : MonoBehaviour
         setJointMovility(leftHand.GetComponent<HingeJoint2D>(), foreArmsAngles.x, foreArmsAngles.y);
         setJointMovility(rightHand.GetComponent<HingeJoint2D>(), -foreArmsAngles.x, -foreArmsAngles.y);
         //Legs and feet
-        setJointMovility(leftLeg.GetComponent<HingeJoint2D>(), legsAngles.x, legsAngles.y);
-        setJointMovility(rightLeg.GetComponent<HingeJoint2D>(), legsAngles.x, legsAngles.y);
-        setJointMovility(leftFoot.GetComponent<HingeJoint2D>(), footsAngles.x, footsAngles.y);
-        setJointMovility(rightFoot.GetComponent<HingeJoint2D>(), -footsAngles.x, -footsAngles.y);
+        setJointMovility(leftLeg.GetComponent<HingeJoint2D>(), 0, 90);
+        setJointMovility(rightLeg.GetComponent<HingeJoint2D>(), 90, 180);
+        setJointMovility(leftFoot.GetComponent<HingeJoint2D>(), 90, 180);
+        setJointMovility(rightFoot.GetComponent<HingeJoint2D>(), 0, 90);
 
         //setFootJointMovility(leftFoot.GetComponent<HingeJoint2D>(), footsAngles.x, footsAngles.y);
         //setFootJointMovility(rightFoot.GetComponent<HingeJoint2D>(), -footsAngles.x, -footsAngles.y);
@@ -92,7 +105,23 @@ public class MouseController : MonoBehaviour
             Vector2 dir = new Vector2(0, 1);
             // JointMotor2D motor = rightArm.GetComponent<HingeJoint2D>().motor;
             if (Input.GetMouseButtonDown(0))
-                head.GetComponent<Rigidbody2D>().velocity = dir * force;
+            {
+                //head.GetComponent<Rigidbody2D>().velocity = dir * force;
+                SetFeetWeights(100);
+                Quaternion footQ = leftFoot.transform.rotation;
+                Quaternion legQ = leftLeg.transform.rotation;
+                float angle = Quaternion.Angle(footQ, legQ);
+                //minimo 0 maximo 90
+                float rotForce = angle / 90.0f;
+                float factor = 9999.0f;
+                //leftFoot.GetComponent<Rigidbody2D>().angularDrag = rotForce * factor;
+                //leftFoot.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -1));
+            }
+            else
+            {
+                //leftFoot.GetComponent<Rigidbody2D>().angularDrag = 0.0f;
+            }
+            
 
             Vector2 armDir, handDir;
             armDir = new Vector2(0, 1);
@@ -105,7 +134,7 @@ public class MouseController : MonoBehaviour
                 setJointMovility(rightHand.GetComponent<HingeJoint2D>(),
                                     forearmFlexedAngles.x, forearmFlexedAngles.y);
 
-                setJointMovility(torso.GetComponent<HingeJoint2D>(), -90, -180);
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), torsoFlexedAngles.x, torsoFlexedAngles.y);
                 //Set de fuerzas
                 rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
@@ -117,15 +146,14 @@ public class MouseController : MonoBehaviour
                           -forearmFlexedAngles.x, -forearmFlexedAngles.y);
                 setJointMovility(leftArm.GetComponent<HingeJoint2D>(),
                           -armFlexedAngles.x, -armFlexedAngles.y);
-                setJointMovility(torso.GetComponent<HingeJoint2D>(), -90, -180);
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), -torsoFlexedAngles.x, -torsoFlexedAngles.y);
                 //Set de fuerzas
                 leftArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 leftHand.GetComponent<Rigidbody2D>().AddForce(handDir* armSpeed);
-
             }
             else
             {
-                setJointMovility(torso.GetComponent<HingeJoint2D>(), 0, 359);
+                setJointMovility(torso.GetComponent<HingeJoint2D>(), torsoAngles.x, torsoAngles.y);
 
                 setJointMovility(rightArm.GetComponent<HingeJoint2D>(), -armAngles.x, -armAngles.y);
                 setJointMovility(leftArm.GetComponent<HingeJoint2D>(), armAngles.x, armAngles.y);
