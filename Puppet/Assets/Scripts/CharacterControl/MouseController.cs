@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
+    public GameObject body;
     public float force;
     public float armSpeed;
     public Vector2 torsoAngles;
@@ -18,12 +19,11 @@ public class MouseController : MonoBehaviour
     public Vector2 forearmFlexedAngles;
 
 
-    private GameObject body, torso, head, rightArm, rightHand, leftArm, leftHand, rightLeg, rightFoot, leftLeg, leftFoot;
+    private GameObject torso, head, rightArm, rightHand, leftArm, leftHand, rightLeg, rightFoot, leftLeg, leftFoot;
     // Start is called before the first frame update
     void Start()
     {
         //Pillamos todos los gameobjects que tienen partes del cuerpo
-        body = transform.GetChild(0).gameObject;
         torso = body.transform.GetChild(0).gameObject;
         head = torso.transform.GetChild(0).gameObject;
         rightArm = torso.transform.GetChild(1).gameObject;
@@ -38,7 +38,6 @@ public class MouseController : MonoBehaviour
         //DebugBodyParts();
         SetAllJointsMovility();
         StartCoroutine(CharacterControlCoroutine());
-        SetFeetWeights(100);
     }
 
     void DebugBodyParts()
@@ -75,10 +74,15 @@ public class MouseController : MonoBehaviour
         setJointMovility(leftHand.GetComponent<HingeJoint2D>(), foreArmsAngles.x, foreArmsAngles.y);
         setJointMovility(rightHand.GetComponent<HingeJoint2D>(), -foreArmsAngles.x, -foreArmsAngles.y);
         //Legs and feet
-        setJointMovility(leftLeg.GetComponent<HingeJoint2D>(), 0, 90);
-        setJointMovility(rightLeg.GetComponent<HingeJoint2D>(), 90, 180);
-        setJointMovility(leftFoot.GetComponent<HingeJoint2D>(), 90, 180);
-        setJointMovility(rightFoot.GetComponent<HingeJoint2D>(), 0, 90);
+        setJointMovility(leftLeg.GetComponent<HingeJoint2D>(), 0, 0);
+        setJointMovility(rightLeg.GetComponent<HingeJoint2D>(), 0,0);
+        setJointMovility(leftFoot.GetComponent<HingeJoint2D>(), 0, 0);
+        setJointMovility(rightFoot.GetComponent<HingeJoint2D>(), 0, 0);
+
+        //setJointMovility(leftLeg.GetComponent<HingeJoint2D>(), 0, 90);
+        //setJointMovility(rightLeg.GetComponent<HingeJoint2D>(), 90, 180);
+        //setJointMovility(leftFoot.GetComponent<HingeJoint2D>(), 90, 180);
+        //setJointMovility(rightFoot.GetComponent<HingeJoint2D>(), 0, 90);
 
         //setFootJointMovility(leftFoot.GetComponent<HingeJoint2D>(), footsAngles.x, footsAngles.y);
         //setFootJointMovility(rightFoot.GetComponent<HingeJoint2D>(), -footsAngles.x, -footsAngles.y);
@@ -106,20 +110,11 @@ public class MouseController : MonoBehaviour
             // JointMotor2D motor = rightArm.GetComponent<HingeJoint2D>().motor;
             if (Input.GetMouseButtonDown(0))
             {
-                //head.GetComponent<Rigidbody2D>().velocity = dir * force;
-                SetFeetWeights(100);
-                Quaternion footQ = leftFoot.transform.rotation;
-                Quaternion legQ = leftLeg.transform.rotation;
-                float angle = Quaternion.Angle(footQ, legQ);
-                //minimo 0 maximo 90
-                float rotForce = angle / 90.0f;
-                float factor = 9999.0f;
-                //leftFoot.GetComponent<Rigidbody2D>().angularDrag = rotForce * factor;
-                //leftFoot.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -1));
+
             }
             else
             {
-                //leftFoot.GetComponent<Rigidbody2D>().angularDrag = 0.0f;
+ 
             }
             
 
@@ -136,6 +131,11 @@ public class MouseController : MonoBehaviour
 
                 setJointMovility(torso.GetComponent<HingeJoint2D>(), torsoFlexedAngles.x, torsoFlexedAngles.y);
                 //Set de fuerzas
+                //torso.GetComponent<Rigidbody2D>().AddForce(Vector2.right * armSpeed);
+                Quaternion q = body.transform.rotation;
+                q.eulerAngles = 
+                //q += Quaternion.identity;
+                body.transform.rotation = q;
                 rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
             }
