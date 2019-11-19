@@ -116,7 +116,7 @@ Se ha elegido una estética cartoon, simulando recortes de cartón, con pegatina
 Bocetos:
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
-![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/boceto5.4.JPG)
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/puppet1.png)
 
 
 ### Música y Sonido
