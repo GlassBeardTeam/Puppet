@@ -133,9 +133,12 @@ public class MouseController : MonoBehaviour
                 //Set de fuerzas
                 //torso.GetComponent<Rigidbody2D>().AddForce(Vector2.right * armSpeed);
                 Quaternion q = body.transform.rotation;
-                q.eulerAngles = 
-                //q += Quaternion.identity;
-                body.transform.rotation = q;
+                if(q.eulerAngles.z < 20.0f)
+                {
+                    q.eulerAngles += new Vector3(0, 0, armSpeed * 0.1f);
+                    body.transform.rotation = q;
+                }
+            
                 rightArm.GetComponent<Rigidbody2D>().AddForce(armDir * armSpeed);
                 rightHand.GetComponent<Rigidbody2D>().AddForce(new Vector2(-handDir.x ,handDir.y) * armSpeed);
             }
