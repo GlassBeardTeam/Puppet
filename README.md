@@ -33,21 +33,21 @@ Versión 0.1
 ## Pitch
 __Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marioneta, accionando sus articulaciones para desplazarte y golpear a enemigos. 
 ### Propósito y público objetivo
-El propósito es crear un juego de plataformas con mecánicas innovadoras, orientado a jugadores habituales del género que busquen nuevas formas de jugar. Además se podrá personalizar la marioneta para distinguirla de las demás.
+El propósito es crear un juego de plataformas con mecánicas innovadoras en el que puedas personalizar a tu personaje, orientado a jugadores habituales del género que busquen nuevas formas de jugar. 
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
 
-Se distribuirá una versión inicial en plataformas digitales, como Steam, Itch.io o Humble Bundle, y se irá actualizando con cosméticos cada cierto tiempo.
-Posteriormente se tratará de llevar a cabo una campaña de micromecenazgo para ampliar el videojuego con nuevas funcionalidades, como el modo multijugador.
-Dicha campaña irá evolucionando en varias fases:
+Se distribuirá de forma gratuita en plataformas digitales, como Steam, Itch.io o Humble Bundle ya que la principal fuente de ingresos será la venta de cosméticos para personalizar a tu personaje.
 
-Fase 1: Campaña de crowdfunding con diferentes niveles de apoyo y sus respectivas recompensas, como poder acceder a la versión alpha del videojuego o aparecer en los créditos del juego.
+Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
+Las pegatinas se podrán conseguir de 3 formas:
+* Gastando Bobinas de Hilo (Coleccionables que se obtienen dentro del juego), para obtener una pegatina al azar.
+* Comprando un set de 5 pegatinas por 0,49€.
+* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas.
+De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
 
-Fase 2: Lanzamiento de la versión alpha para los que hayan apoyado el juego.
+En caso de que el formato tenga un buen recibimiento, se añadirían nuevos packs de pegatinas.
 
-Fase 3: Venta del juego completo en diferentes plataformas digitales de distribución de videojuegos. (Modo plataformas + multijugador)
-
-Fase 4: Lanzamiento de acceso a multijugador de forma gratuita y Venta de cosméticos adicionales.
 ## Mecánicas
 La mecánica principal del juego consiste en contraer y relajar las articulaciones de la marioneta para rotar al personaje e impulsarte en la dirección deseada. Además, se podrá  interactuar con el escenario (saltando contra las paredes, empleando muelles para saltar más alto o derrotar a enemigos con tus extremidades).
 
