@@ -14,8 +14,8 @@ public class Muscle
 
     public void ActiveMuscle()
     {
-        bone.MoveRotation(Mathf.LerpAngle(bone.rotation, restingRot, restForce * Time.deltaTime));
-        /*
+        //bone.MoveRotation(Mathf.LerpAngle(bone.rotation, restingRot, restForce * Time.deltaTime));
+        
         if (!isFlexed)
         {
             bone.MoveRotation(Mathf.LerpAngle(bone.rotation, restingRot, restForce * Time.deltaTime));
@@ -24,7 +24,7 @@ public class Muscle
         {
             bone.MoveRotation(Mathf.LerpAngle(bone.rotation, flexedRot, flexForce * Time.deltaTime));
         }
-        */
+        
     }
 
 

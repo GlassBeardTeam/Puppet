@@ -18,21 +18,25 @@ enum BodyParts
 
 public class Puppet : MonoBehaviour
 {
+    [Range(0.1f, 5.0f)]
+    public float maxLegFlexTime;
+    [Range(1000.0f, 9999.0f)]
+    public float maxJumpForce;
+
     GameObject[] bodyParts;
     public Muscle[] muscles;
     private Vector2[] initLocalPositions;
     private bool isGrounded = true;
+
+    private bool keepMoving = true;
     // Start is called before the first frame update
     void Start()
     {
-        
         SetBodyParts();
-        SetLocalPositions();
-        //StartCoroutine(CheckGrounded());
-        //DisableCollisions();
+        Ignore_torso_hands_collision();
+        StartCoroutine(VerticalMovement());
+        StartCoroutine(HorizontalMovement());
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -40,50 +44,132 @@ public class Puppet : MonoBehaviour
         ActiveMuscles();
     }
 
+    IEnumerator HorizontalMovement()
+    {
+        while(keepMoving)
+        {
+            //MOVIMIENTO HORIZONTAL
+            float horiz = Input.GetAxis("Horizontal");
+            if (horiz > 0.0f)
+            {
+                FlexRight();
+            }
+            else if (horiz < 0.0f)
+            {
+                FlexLeft();
+            }
+            else
+            {
+                RelaxTargetMuscles(new[]{(int)BodyParts.TORSO, (int)BodyParts.BRAZO_IZ,
+                (int)BodyParts.BRAZO_DER, (int)BodyParts.MANO_IZ, (int)BodyParts.MANO_DER});
+            }
+            yield return null;
+        }
+       
+
+    }
+    IEnumerator VerticalMovement()
+    {
+        float flexedTime = 0.0f;
+        //Guardamos las rotaciones de las piernas en variables
+        float relaxedLegRot_right = muscles[(int)BodyParts.PIERNA_DER].restingRot;
+        float flexedLegRot_right = muscles[(int)BodyParts.PIERNA_DER].flexedRot;
+        float relaxedLegRot_left = muscles[(int)BodyParts.PIERNA_IZ].restingRot;
+        float flexedLegRot_left = muscles[(int)BodyParts.PIERNA_IZ].flexedRot;
+        //Seteamos la rotacion flexionada de las piernas a la de reposo
+        muscles[(int)BodyParts.PIERNA_DER].flexedRot = relaxedLegRot_right;
+        muscles[(int)BodyParts.PIERNA_IZ].flexedRot = relaxedLegRot_left;
+
+        //Guardamos los rigidBody para acceder a su rotacion posteriormente
+        Rigidbody2D rb_right = bodyParts[(int)BodyParts.PIERNA_DER].GetComponent<Rigidbody2D>();
+        Rigidbody2D rb_left = bodyParts[(int)BodyParts.PIERNA_IZ].GetComponent<Rigidbody2D>();
+        //Guardamos el rigidbody del torso para lanzarlo posteriormente
+        Rigidbody2D rb_torso = bodyParts[(int)BodyParts.TORSO].GetComponent<Rigidbody2D>();
+
+        while (keepMoving)
+        {
+            //MOVIMIENTO VERTICAL
+            float vert = Input.GetAxis("Vertical");
+            if (vert < 0.0f)
+            {
+                flexedTime += Time.deltaTime;
+                //Aumentamos la rotacion
+                float rotPercentage = flexedTime / maxLegFlexTime;
+                Mathf.Clamp01(rotPercentage);
+                rb_left.rotation = Mathf.Lerp(rb_left.rotation, flexedLegRot_left, rotPercentage);
+                rb_right.rotation = Mathf.Lerp(rb_right.rotation, flexedLegRot_right, rotPercentage);
+            }
+            else
+            {
+             
+                if(flexedTime != 0.0f)
+                {
+                    float rotPercentage = flexedTime / maxLegFlexTime;
+                    JumpWithForce(rb_torso, Mathf.Clamp01(rotPercentage));
+                }
+                flexedTime = 0.0f; //reset del tiempo flexionado
+                //Relajamos musculos
+                RelaxTargetMuscles(new[]{(int)BodyParts.PIERNA_IZ, (int)BodyParts.PIERNA_DER,
+                (int)BodyParts.PIE_IZ, (int)BodyParts.PIE_DER });
+            }
+
+            yield return null;
+        }
+    }
+    void JumpWithForce(Rigidbody2D rb_torso, float rotPercentage)
+    {
+        float rot = rb_torso.rotation;
+        float radiansRot = rot * Mathf.PI / 180.0f;
+        float x = Mathf.Cos(radiansRot);
+        float y = Mathf.Sin(radiansRot);
+        /*
+         El vector es y,x en vez de x,y porque el torso ya esta en
+         90 respecto al mundo, aunque para nosotros este a 0
+         El signo '-' de la y es porque los angulos van al reves:
+         negativos a la derecha y positivos a la izquierda
+        */
+        Vector2 jumpDir = new Vector2(-y, x);
+        float totalJumpForce = maxJumpForce * rotPercentage;
+        rb_torso.AddForce(jumpDir * totalJumpForce);
+
+    }
     void ActiveMuscles()
     {
         foreach (Muscle m in muscles)
         {
             m.ActiveMuscle();
         }
-        if(Input.GetKey(KeyCode.W))
+    
+    }
+
+    void RelaxTargetMuscles(int[] relaxMuscles)
+    {
+        for(int i = 0; i< relaxMuscles.Length; i++)
         {
-            //ArmsFlex();
-        }
-        else
-        {
-            //RelaxMuscles();
+            int index = relaxMuscles[i];
+            muscles[index].isFlexed = false;
         }
     }
-    void ArmsFlex()
+
+    void FlexRight()
     {
         muscles[(int)BodyParts.BRAZO_DER].isFlexed = true;
-        muscles[(int)BodyParts.BRAZO_IZ].isFlexed = true;
         muscles[(int)BodyParts.MANO_DER].isFlexed = true;
+        muscles[(int)BodyParts.TORSO].isFlexed = true;
+
+        float flexedRot = muscles[(int)BodyParts.TORSO].flexedRot;
+        muscles[(int)BodyParts.TORSO].flexedRot = -Mathf.Abs(flexedRot);
+    }
+
+    void FlexLeft()
+    {
+        muscles[(int)BodyParts.BRAZO_IZ].isFlexed = true;
         muscles[(int)BodyParts.MANO_IZ].isFlexed = true;
-    }
+        muscles[(int)BodyParts.TORSO].isFlexed = true;
 
-    void RelaxMuscles()
-    {
-        foreach(Muscle m in muscles)
-        {
-            m.isFlexed = false;
-        }
-    }
-    void SetLocalPositions()
-    {
-        initLocalPositions = new Vector2[bodyParts.Length];
-        for(int i = 0; i< initLocalPositions.Length; i++)
-        {
-            initLocalPositions[i] = bodyParts[i].transform.localPosition;
-        }
-    }
-
-    void Flex(BodyParts bp, Vector2 direction, float force)
-    {
-        Rigidbody2D bone = bodyParts[(int)(bp)].transform.GetComponent<Rigidbody2D>();
-        bone.AddForce(force * direction);
         
+        float flexedRot = muscles[(int)BodyParts.TORSO].flexedRot;
+        muscles[(int)BodyParts.TORSO].flexedRot = Mathf.Abs(flexedRot);
     }
 
     void SetBodyParts()
@@ -96,28 +182,6 @@ public class Puppet : MonoBehaviour
     
     }
 
-    IEnumerator CheckGrounded()
-    {
-        Collider2D floor = GameObject.Find("floor").transform.GetComponent<Collider2D>();
-        Collider2D leftFoot = bodyParts[(int)BodyParts.PIERNA_IZ].transform.GetComponent<Collider2D>();
-        Collider2D rightFoot = bodyParts[(int)BodyParts.PIERNA_IZ].transform.GetComponent<Collider2D>();
-
-     ;
-        do
-        {
-            if (leftFoot.IsTouching(floor) && leftFoot.IsTouching(floor))
-            {
-                isGrounded = true;
-            }else
-            {
-                isGrounded = false;
-                //poner bien
-                Debug.Log("Poner bien el puppet");
-                
-            }
-            yield return new WaitForSeconds(2.0f);
-        } while (true);
-    }
     void DisableCollisions()
     {
         for (int i = 0; i < bodyParts.Length; i++)
@@ -131,5 +195,13 @@ public class Puppet : MonoBehaviour
                 
         }
     }
+    void Ignore_torso_hands_collision()
+    {
+        Collider2D torso_collider = bodyParts[(int)BodyParts.TORSO].GetComponent<Collider2D>();
+        Collider2D left_hand_collider = bodyParts[(int)BodyParts.MANO_IZ].GetComponent<Collider2D>();
+        Collider2D right_hand_collider = bodyParts[(int)BodyParts.MANO_DER].GetComponent<Collider2D>();
 
+        Physics2D.IgnoreCollision(torso_collider, left_hand_collider);
+        Physics2D.IgnoreCollision(torso_collider, right_hand_collider);
+    }
 }
