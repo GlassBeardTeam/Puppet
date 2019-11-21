@@ -37,16 +37,9 @@ El propósito es crear un juego de plataformas con mecánicas innovadoras en el 
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
 
-Se distribuirá de forma gratuita en plataformas digitales, como Steam, Itch.io o Humble Bundle ya que la principal fuente de ingresos será la venta de cosméticos para personalizar a tu personaje.
+Se distribuirá de forma gratuita en plataformas digitales, como Steam, Itch.io o Humble Bundle ya que la principal fuente de ingresos será la venta de pegatinas para personalizar a tu personaje.
 
-Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
-Las pegatinas se podrán conseguir de 3 formas:
-* Gastando Bobinas de Hilo (Coleccionables que se obtienen dentro del juego), para obtener una pegatina al azar.
-* Comprando un set de 5 pegatinas por 0,49€.
-* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas.
-De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
-
-En caso de que el formato tenga un buen recibimiento, se añadirían nuevos packs de pegatinas.
+En caso de que el formato tenga un buen recibimiento, se añadirían nuevos niveles con sus propios packs de pegatinas.
 
 ## Mecánicas
 La mecánica principal del juego consiste en contraer y relajar las articulaciones de la marioneta para rotar al personaje e impulsarte en la dirección deseada. Además, se podrá  interactuar con el escenario (saltando contra las paredes, empleando muelles para saltar más alto o derrotar a enemigos con tus extremidades).
@@ -67,6 +60,15 @@ __Obstáculos:__
 * balas de cañón: Te empujan en la dirección en la que se dirijan.
 * sierras: hacen la marioneta pedazos al más mínimo contacto.
 
+__Personalización:__ 
+Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
+Las pegatinas se podrán conseguir de 3 formas:
+* Gastando Bobinas para obtener una pegatina al azar que no poseeas previamente.
+* Comprando un set de 6 pegatinas por 0,49€. Este set incluiría Cabeza, torso, brazos, antebrazos, piernas y pies de un mismo conjunto.
+* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas.
+De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
+
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Personalizar.png)
 
 ### Controles
 La marioneta se controla con 3 botones:
@@ -76,7 +78,7 @@ La marioneta se controla con 3 botones:
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas3.png)
 
-Los botones podrían controlar otras articulaciones en caso de que se añadan nuevas marionetas, aunque las mecánicas básicas de rotar al personaje e impulsarte se mantendrían.
+Los botones podrían controlar otras articulaciones en caso de que se añadan nuevas marionetas, aunque las mecánicas básicas de rotar al personaje e impulsarse se mantendrían.
 
 ### Puntuación
 La puntuación obtenida en un nivel dependerá del tiempo que tardes en completarlo y del porcentaje de coleccionables que consigas en el mismo.
