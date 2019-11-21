@@ -64,8 +64,8 @@ __Personalización:__
 Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
 Las pegatinas se podrán conseguir de 3 formas:
 * Gastando Bobinas para obtener una pegatina al azar que no poseeas previamente.
-* Comprando un set de 6 pegatinas por 0,49€. Este set incluiría Cabeza, torso, brazos, antebrazos, piernas y pies de un mismo conjunto.
-* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas.
+* Comprando un set de 10 pegatinas por 0,49€. Este set incluiría Cabeza, torso, brazos, antebrazos, piernas y pies de un mismo conjunto.
+* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas (100 pegatinas).
 De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Personalizar.png)
