@@ -10,6 +10,7 @@ public class Attacher : MonoBehaviour
     void Start()
     {
         hj = GetComponent<HingeJoint2D>();
+        container = GameObject.Find("Player");
     }
 
     // Update is called once per frame

@@ -25,6 +25,7 @@ public class RespawnController : MonoBehaviour
     {
         if (!isDead)
         {
+            Debug.Log("Dead");
             isDead = true;
             StartCoroutine(teleport(3f));
         }
@@ -39,6 +40,10 @@ public class RespawnController : MonoBehaviour
 
         GameObject instance =  Instantiate(puppetPrefab, transform.position, transform.rotation).gameObject;
         instance.transform.parent = transform;
+
+        Debug.Log("Respawn");
+
+        isDead = false;
     }
 
 }
