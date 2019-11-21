@@ -6,8 +6,8 @@ public class SpringPlatform : MonoBehaviour
 {
     Rigidbody2D rb;
     float initHeight;
-    float yoffset = 0.2f;
-    float upwardForce = 1000;
+    float yoffset = 0.0f;
+    float upwardForce;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +19,12 @@ public class SpringPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        upwardForce = Mathf.Pow(((initHeight - transform.position.y)*2), 11);
         rb.AddForce(new Vector2(0, upwardForce));
         if(transform.position.y > initHeight + yoffset)
         {
             transform.position = new Vector2(transform.position.x, initHeight + yoffset);
-            upwardForce = 1000;
         }
-        else if(transform.position.y < initHeight - yoffset)
-        {
-            upwardForce = 3000;
-        }
+        
     }
 }
