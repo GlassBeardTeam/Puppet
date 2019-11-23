@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\adrip\Desktop\Puppet\reimportPuppet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 9c090000
-    m_LastClickedID: 2460
-    m_ExpandedIDs: 000000009c090000e40900000c0b0000a60b000000ca9a3b
+    scrollPos: {x: 0, y: 83}
+    m_SelectedIDs: 160b0000
+    m_LastClickedID: 2838
+    m_ExpandedIDs: 00000000a4090000ee090000160b0000b40b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c090000e40900000c0b0000a60b0000
+    m_ExpandedIDs: 00000000a4090000ee090000160b0000b40b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,9 +402,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 082d0000
-    m_LastClickedInstanceID: 11528
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: a80d0000
+    m_LastClickedInstanceID: 3496
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -495,24 +495,24 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 60}
-      m_SelectedIDs: 082d0000
-      m_LastClickedID: 11528
-      m_ExpandedIDs: 96f8ffffa4f8ffffa8f8ffffdcf8ffff36f9ffffd6fbffff9c2c0000082d00000e2d0000ae2d0000
+      scrollPos: {x: 0, y: 12}
+      m_SelectedIDs: a80d0000
+      m_LastClickedID: 3496
+      m_ExpandedIDs: 66fbffffa0fbffffd4fbffffd6fbffffa80d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: gear
-        m_OriginalName: gear
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 11598
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.555638, y: 7.027812, z: -0.2421875}
+    m_Target: {x: 17.370707, y: 3.2535024, z: -0.30868974}
     speed: 2
-    m_Value: {x: 4.555638, y: 7.027812, z: -0.2421875}
+    m_Value: {x: 17.370707, y: 3.2535024, z: -0.30868974}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -587,9 +587,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 28.123491
+    m_Target: 35.362587
     speed: 2
-    m_Value: 28.123491
+    m_Value: 35.362587
   m_Ortho:
     m_Target: 1
     speed: 2

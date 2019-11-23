@@ -60,17 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Collectible.cs" />
-    <Compile Include="Assets\CollectibleCoil.cs" />
-    <Compile Include="Assets\DoorScript.cs" />
-    <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\Attacher.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\MouseController.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\RespawnController.cs" />
+    <Compile Include="Assets\Scripts\Collectible.cs" />
+    <Compile Include="Assets\Scripts\CollectibleCoil.cs" />
+    <Compile Include="Assets\Scripts\DoorScript.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\Menu\SetVolume.cs" />
-    <Compile Include="Assets\Scripts\sringPlatformrr\SpringPlatform.cs" />
+    <Compile Include="Assets\Scripts\SpringPlatform.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/adrip/Desktop/Puppet/reimportPuppet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

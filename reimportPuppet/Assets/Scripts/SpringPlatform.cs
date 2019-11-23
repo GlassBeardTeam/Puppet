@@ -19,7 +19,7 @@ public class SpringPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        upwardForce = Mathf.Pow(((initHeight - transform.position.y)*2), 11);
+        upwardForce = Mathf.Clamp(Mathf.Pow(((initHeight - transform.position.y)*2), 10), 0, 25000);
         rb.AddForce(new Vector2(0, upwardForce));
         if(transform.position.y > initHeight + yoffset)
         {
