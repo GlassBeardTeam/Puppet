@@ -28,9 +28,11 @@ public class GameController : MonoBehaviour
     {
         if (tenths > 9)
         {
+            tenths = 0;
             seconds++;
             if(seconds > 59)
             {
+                seconds = 0;
                 minutes++;
             }
         }
