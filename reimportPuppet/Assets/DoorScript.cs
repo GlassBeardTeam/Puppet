@@ -24,5 +24,10 @@ public class DoorScript : MonoBehaviour
     public void showGear()
     {
         gears.Pop().SetActive(true);
+
+        if(gears.Count == 0)
+        {
+            //abrir puerta
+        }
     }
 }

@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public Text coilText;
     public Text timerText;
 
+    GameObject door;
+
     int gears;
     int coil;
 
@@ -21,12 +23,13 @@ public class GameController : MonoBehaviour
     {
         gears = 0;
         coil = 0;
+        door = GameObject.FindGameObjectWithTag("door");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (tenths > 9)
+        if (tenths > 99)
         {
             tenths = 0;
             seconds++;
@@ -37,7 +40,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        tenths += Time.deltaTime * 10;
+        tenths += Time.deltaTime * 100;
 
         timerText.text = "" + minutes + " : " + seconds + " : " + (int)tenths;
     }
@@ -45,7 +48,7 @@ public class GameController : MonoBehaviour
     public void addGear()
     {
         gears++;
-        GameObject.Find("door").GetComponent<DoorScript>().showGear();
+        door.GetComponent<DoorScript>().showGear();
     }
 
     public void addCoil()
