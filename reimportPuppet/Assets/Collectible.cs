@@ -22,7 +22,6 @@ public class Collectible : MonoBehaviour
         if (!collected)
         {
             collected = true;
-            Debug.Log("Gear Collision");
             Destroy(gameObject);
             GameObject.Find("GameController").GetComponent<GameController>().addGear();
         }
