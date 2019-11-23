@@ -5,12 +5,12 @@ using UnityEngine;
 public class Attacher : MonoBehaviour
 {
     HingeJoint2D hj;
-    public GameObject container;
+    GameObject container;
     // Start is called before the first frame update
     void Start()
     {
         hj = GetComponent<HingeJoint2D>();
-        container = GameObject.Find("Player");
+        container = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
