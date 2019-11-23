@@ -8,7 +8,7 @@ public class RespawnController : MonoBehaviour
     public Transform puppetPrefab;
 
     bool isDead = false;
-    public GameObject lastCheckpoint;
+    GameObject lastCheckpoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,11 @@ public class RespawnController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void setLastCheckpoint(GameObject checkpoint)
+    {
+        lastCheckpoint = checkpoint;
     }
 
     public void die()
@@ -33,17 +38,20 @@ public class RespawnController : MonoBehaviour
 
     private IEnumerator teleport(float seconds)
     {
-        yield return new WaitForSeconds(seconds);
-        Destroy(transform.GetChild(0).gameObject);
-        
-        transform.position = lastCheckpoint.transform.position;
+        if (lastCheckpoint != null)
+        {
+            yield return new WaitForSeconds(seconds);
+            Destroy(transform.GetChild(0).gameObject);
 
-        GameObject instance =  Instantiate(puppetPrefab, transform.position, transform.rotation).gameObject;
-        instance.transform.parent = transform;
+            transform.position = lastCheckpoint.transform.position;
 
-        Debug.Log("Respawn");
+            GameObject instance = Instantiate(puppetPrefab, transform.position, transform.rotation).gameObject;
+            instance.transform.parent = transform;
 
-        isDead = false;
+            Debug.Log("Respawn");
+
+            isDead = false;
+        }
     }
 
 }

@@ -26,6 +26,14 @@ public class Attacher : MonoBehaviour
             unattach();
             container.GetComponent<RespawnController>().die();
         }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "checkpoint")
+        {
+            container.GetComponent<RespawnController>().setLastCheckpoint(collision.gameObject);
+        }
     }
 
     void unattach()
