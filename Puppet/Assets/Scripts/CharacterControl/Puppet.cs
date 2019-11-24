@@ -18,6 +18,14 @@ enum BodyParts
 
 public class Puppet : MonoBehaviour
 {
+    private static Puppet instance_;
+    public static Puppet Instace_
+    {
+        get
+        {
+            return instance_;
+        }
+    }
     [Range(0.1f, 5.0f)]
     public float maxLegFlexTime;
     [Range(1000.0f, 9999.0f)]
@@ -26,14 +34,17 @@ public class Puppet : MonoBehaviour
     GameObject[] bodyParts;
     public Muscle[] muscles;
     private Vector2[] initLocalPositions;
+    //Grounded variables
     private bool isGrounded = true;
 
     private bool keepMoving = true;
     // Start is called before the first frame update
     void Start()
     {
+        instance_ = this;
         SetBodyParts();
         Ignore_torso_hands_collision();
+        Ignore_FeetBodyCollisions();
         StartCoroutine(VerticalMovement());
         StartCoroutine(HorizontalMovement());
     }
@@ -86,6 +97,9 @@ public class Puppet : MonoBehaviour
         //Guardamos el rigidbody del torso para lanzarlo posteriormente
         Rigidbody2D rb_torso = bodyParts[(int)BodyParts.TORSO].GetComponent<Rigidbody2D>();
 
+        //Guardamos los rigidbody de los pies para cambiar su friccion
+        Rigidbody2D rb_foot_right = bodyParts[(int)BodyParts.PIERNA_DER].GetComponent<Rigidbody2D>();
+        Rigidbody2D rb_foot_left = bodyParts[(int)BodyParts.PIERNA_IZ].GetComponent<Rigidbody2D>();
         while (keepMoving)
         {
             //MOVIMIENTO VERTICAL
@@ -102,10 +116,12 @@ public class Puppet : MonoBehaviour
             else
             {
              
-                if(flexedTime != 0.0f)
+                //Condicion de saltar
+                if(flexedTime != 0.0f && IsGrounded())
                 {
                     float rotPercentage = flexedTime / maxLegFlexTime;
                     JumpWithForce(rb_torso, Mathf.Clamp01(rotPercentage));
+
                 }
                 flexedTime = 0.0f; //reset del tiempo flexionado
                 //Relajamos musculos
@@ -115,6 +131,45 @@ public class Puppet : MonoBehaviour
 
             yield return null;
         }
+    }
+    bool IsGrounded()
+    {
+        BoxCollider2D foot_right = bodyParts[(int)BodyParts.PIE_DER].GetComponent<BoxCollider2D>();
+        BoxCollider2D foot_left = bodyParts[(int)BodyParts.PIE_IZ].GetComponent<BoxCollider2D>();
+
+        CapsuleCollider2D right = bodyParts[(int)BodyParts.PIE_DER].GetComponent<CapsuleCollider2D>();
+        CapsuleCollider2D left = bodyParts[(int)BodyParts.PIE_IZ].GetComponent<CapsuleCollider2D>();
+        ContactFilter2D cf = new ContactFilter2D();
+        Collider2D[] results = new Collider2D[12];
+
+        int size = foot_right.OverlapCollider(cf.NoFilter(), results);
+        isGrounded = true;
+        if(!CheckIfCollidesSomethingMore(results, size))
+        {
+            results = new Collider2D[12];
+            size = foot_left.OverlapCollider(cf.NoFilter(), results);
+            if(!CheckIfCollidesSomethingMore(results, size))
+            {
+                isGrounded = false;
+            }
+        }
+        return isGrounded;
+    }
+    bool CheckIfCollidesSomethingMore(Collider2D[] results, int size)
+    {
+        for(int i = 0; i< bodyParts.Length; i++)
+        {
+            Collider2D part = bodyParts[i].GetComponent<Collider2D>();
+            for (int j = 0; j < size; j++)
+            {
+                Collider2D r = results[j];
+                if (r.gameObject.tag != part.gameObject.tag)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     void JumpWithForce(Rigidbody2D rb_torso, float rotPercentage)
     {
@@ -131,7 +186,6 @@ public class Puppet : MonoBehaviour
         Vector2 jumpDir = new Vector2(-y, x);
         float totalJumpForce = maxJumpForce * rotPercentage;
         rb_torso.AddForce(jumpDir * totalJumpForce);
-
     }
     void ActiveMuscles()
     {
@@ -179,7 +233,6 @@ public class Puppet : MonoBehaviour
         {
             bodyParts[i] = this.transform.GetChild(i).gameObject;
         }
-    
     }
 
     void DisableCollisions()
@@ -195,6 +248,24 @@ public class Puppet : MonoBehaviour
                 
         }
     }
+    void Ignore_FeetBodyCollisions()
+    {
+        //Ignore foot collision with all body parts
+        BoxCollider2D right = bodyParts[(int)BodyParts.PIE_DER].GetComponent<BoxCollider2D>();
+        BoxCollider2D left = bodyParts[(int)BodyParts.PIE_IZ].GetComponent<BoxCollider2D>();
+
+        Physics2D.IgnoreCollision(right, left);
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            Collider2D[] colliders = bodyParts[i].GetComponents<Collider2D>();
+            foreach (Collider2D c in colliders)
+            {
+                Physics2D.IgnoreCollision(right, c);
+                Physics2D.IgnoreCollision(left, c);
+            }
+        }
+
+    }
     void Ignore_torso_hands_collision()
     {
         Collider2D torso_collider = bodyParts[(int)BodyParts.TORSO].GetComponent<Collider2D>();
@@ -204,4 +275,5 @@ public class Puppet : MonoBehaviour
         Physics2D.IgnoreCollision(torso_collider, left_hand_collider);
         Physics2D.IgnoreCollision(torso_collider, right_hand_collider);
     }
+
 }
