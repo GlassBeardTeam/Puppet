@@ -1,7 +1,7 @@
 # Pappet
 
 ## Documento de diseño
-Versión 0.1
+Versión 0.9
 
 ### Glass Beard
 
@@ -20,6 +20,7 @@ Versión 0.1
 [Mecánicas](https://github.com/GlassBeardTeam/Puppet#mec%C3%A1nicas)
   * [Controles](https://github.com/GlassBeardTeam/Puppet#controles)
   * [Puntuación](https://github.com/GlassBeardTeam/Puppet#puntuaci%C3%B3n)
+  * [Personalización] (https://github.com/GlassBeardTeam/Puppet/blob/master/README.md#personalizaci%C3%B3n)
 
 [Interfaz](https://github.com/GlassBeardTeam/Puppet#interfaz)
 
@@ -58,16 +59,6 @@ __Obstáculos:__
 * balas de cañón: Te empujan en la dirección en la que se dirijan.
 * sierras: hacen la marioneta pedazos al más mínimo contacto.
 
-### Personalización: 
-Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
-Las pegatinas se podrán conseguir de 3 formas:
-* Gastando Bobinas para obtener una pegatina al azar que no poseeas previamente.
-* Comprando un set de 10 pegatinas por 0,49€. Este set incluiría Cabeza, torso, brazos, antebrazos, piernas y pies de un mismo conjunto.
-* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas (100 pegatinas).
-De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
-
-![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Personalizar.png)
-
 ### Controles
 La marioneta se controla con 3 botones:
 
@@ -80,6 +71,16 @@ Los botones podrían controlar otras articulaciones en caso de que se añadan nu
 
 ### Puntuación
 La puntuación obtenida en un nivel dependerá del tiempo que tardes en completarlo y del porcentaje de coleccionables que consigas en el mismo.
+
+### Personalización: 
+Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
+Las pegatinas se podrán conseguir de 3 formas:
+* Gastando Bobinas para obtener una pegatina al azar que no poseeas previamente.
+* Comprando un set de 10 pegatinas por 0,49€. Este set incluiría Cabeza, torso, brazos, antebrazos, piernas y pies de un mismo conjunto.
+* Comprando el pack completo de pegatinas por 2,49€ que contendría 10 sets de pegatinas (100 pegatinas).
+De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma gratuita, pero tendría que dedicarle bastante tiempo al juego haciendo más probable que se quede y/o siga jugando.
+
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Personalizar.png)
 
 ## Interfaz
 __Menú principal__
