@@ -1,4 +1,4 @@
-# Puppet Theater
+# Pappet
 
 ## Documento de diseño
 Versión 0.1
@@ -31,15 +31,13 @@ Versión 0.1
 [Redes Sociales](https://github.com/GlassBeardTeam/Puppet#redes-sociales)
 
 ## Pitch
-__Puppet Theater__ es un juego de plataformas 2D en el que manejas a una marioneta, accionando sus articulaciones para desplazarte y golpear a enemigos. 
+__Pappet__ es un juego de plataformas 2D en el que manejas a una marioneta, accionando sus articulaciones para desplazarte y golpear a enemigos. 
 ### Propósito y público objetivo
 El propósito es crear un juego de plataformas con mecánicas innovadoras en el que puedas personalizar a tu personaje, orientado a jugadores habituales del género que busquen nuevas formas de jugar. 
 ### Plataforma y monetización
 El juego estará adaptado para cualquier dispositivo con navegador Chrome o Firefox (Pc, móvil, tablet...) y Facebook.
 
-Se distribuirá de forma gratuita en plataformas digitales, como Steam, Itch.io o Humble Bundle ya que la principal fuente de ingresos será la venta de pegatinas para personalizar a tu personaje.
-
-En caso de que el formato tenga un buen recibimiento, se añadirían nuevos niveles con sus propios packs de pegatinas.
+Se distribuirá de forma gratuita en plataformas digitales, como Steam, Itch.io o Humble Bundle ya que la principal fuente de ingresos será la venta de pegatinas para personalizar a tu personaje (ver "Personalización" para más información).
 
 ## Mecánicas
 La mecánica principal del juego consiste en contraer y relajar las articulaciones de la marioneta para rotar al personaje e impulsarte en la dirección deseada. Además, se podrá  interactuar con el escenario (saltando contra las paredes, empleando muelles para saltar más alto o derrotar a enemigos con tus extremidades).
@@ -60,7 +58,7 @@ __Obstáculos:__
 * balas de cañón: Te empujan en la dirección en la que se dirijan.
 * sierras: hacen la marioneta pedazos al más mínimo contacto.
 
-__Personalización:__ 
+### Personalización: 
 Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
 Las pegatinas se podrán conseguir de 3 formas:
 * Gastando Bobinas para obtener una pegatina al azar que no poseeas previamente.
@@ -101,14 +99,12 @@ __Juego__
 
 ## Arte
 ### Historia
-Ideas:
-* Cada 100 años se celebra una competición entre marionetas en el Puppet Theater para decidir a la marioneta maestra. Una caja de payaso con mucho tiempo libre y muy poco interés en la competición decide entrenarte para que consigas la victoria.
-* Te despiertas en un teatro de marionetas y no te queda más remedio que seguir las indicaciones del dueño, que te entrenará para que entretengas al público, hasta que te vuelves demasiado fuerte como para que pueda controlarte y decide acabar contigo.
+Te despiertas en un teatro de marionetas y no te queda más remedio que seguir las indicaciones del dueño, que te entrenará para que entretengas al público, hasta que te vuelves demasiado fuerte como para que pueda controlarte y decide acabar contigo.
 
 __Personajes__
 - Títere: Personaje principal que controlará el jugador durante la historia. Es una marioneta tradicional desechada por su antiguo dueño.
 
-- Socavón: Una caja de payaso que será tu maestro en el juego y te guiará durante el tutorial. Su método de enseñanza es un tanto peculiar. No parará de hacer bromas con la forma de desplazarse de Títere y dará más problemas que facilidades a tu avance.
+- Diantre: Una caja de payaso que será tu maestro en el juego y te guiará durante el tutorial. Su método de enseñanza es un tanto peculiar. No parará de hacer bromas con la forma de desplazarse de Títere y dará más problemas que facilidades a tu avance.
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Puppet%20Master.png)
 
 
@@ -125,12 +121,12 @@ Bocetos:
 La música debe ser animada y circense, de forma que recuerde a un teatro de marionetas.
 
 Sonido: 
-- Madera golpeando al moverse el personaje.
+- Cartón golpeando al moverse el personaje.
 - Hilos al contraer articulaciones.
 - Golpear a un objetivo.
 - Recibir daño.
-- Diálogos de Puppet Master.
-- Muelle y caja de Puppet Master.
+- Diálogos de Diantre.
+- Muelle y caja de Diantre.
 - Coger bobina.
 - Alcanzar la meta.
 - Enemigos.
@@ -146,7 +142,7 @@ Facebook: [Glass BeardTeam](https://www.facebook.com/glass.beardteam.7)
 
 Portfolio: [Glass Beard Team](https://glassbeardteam.github.io/Portfolio/)
 
-Itch.io: [Puppet Theater](https://glassbeard.itch.io/)
+Itch.io: [Pappet](https://glassbeard.itch.io/)
 
 
 © 2019 GitHub, Inc.
