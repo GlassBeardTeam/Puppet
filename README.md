@@ -20,7 +20,7 @@ Versión 0.9
 [Mecánicas](https://github.com/GlassBeardTeam/Puppet#mec%C3%A1nicas)
   * [Controles](https://github.com/GlassBeardTeam/Puppet#controles)
   * [Puntuación](https://github.com/GlassBeardTeam/Puppet#puntuaci%C3%B3n)
-  * [Personalización] (https://github.com/GlassBeardTeam/Puppet/blob/master/README.md#personalizaci%C3%B3n)
+  * [Personalización](https://github.com/GlassBeardTeam/Puppet/blob/master/README.md#personalizaci%C3%B3n)
 
 [Interfaz](https://github.com/GlassBeardTeam/Puppet#interfaz)
 
