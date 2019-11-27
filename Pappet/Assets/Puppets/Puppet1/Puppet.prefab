@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7288583757381703444}
   - component: {fileID: 7288583757381703445}
   - component: {fileID: 7288583757381703450}
+  - component: {fileID: 3240211666285758996}
   m_Layer: 0
   m_Name: mano izq
   m_TagString: PuppetPart
@@ -143,6 +144,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.75, y: 1.16}
   m_Direction: 0
+--- !u!114 &3240211666285758996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583757381703448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583757422292662
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +169,7 @@ GameObject:
   - component: {fileID: 7288583757422292657}
   - component: {fileID: 7288583757422292659}
   - component: {fileID: 7288583757422292656}
+  - component: {fileID: 2839977423410458988}
   m_Layer: 0
   m_Name: brazo der
   m_TagString: PuppetPart
@@ -286,6 +300,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &2839977423410458988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583757422292662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583757794456339
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +325,7 @@ GameObject:
   - component: {fileID: 7288583757794456338}
   - component: {fileID: 7288583757794456428}
   - component: {fileID: 7288583757794456429}
+  - component: {fileID: 7594975959758983649}
   m_Layer: 0
   m_Name: pierna izquierda
   m_TagString: PuppetPart
@@ -429,6 +456,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &7594975959758983649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583757794456339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583757922432061
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +481,7 @@ GameObject:
   - component: {fileID: 7288583757922432060}
   - component: {fileID: 7288583757922432062}
   - component: {fileID: 7288583757922432063}
+  - component: {fileID: 7907043388489008234}
   m_Layer: 0
   m_Name: pierna derecha
   m_TagString: PuppetPart
@@ -572,6 +612,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &7907043388489008234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583757922432061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583758268624233
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +637,7 @@ GameObject:
   - component: {fileID: 7288583758268624232}
   - component: {fileID: 7288583758268624234}
   - component: {fileID: 7288583758268624235}
+  - component: {fileID: 7464201224830653575}
   m_Layer: 0
   m_Name: torso1
   m_TagString: PuppetPart
@@ -725,6 +778,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &7464201224830653575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583758268624233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583758475133685
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +804,7 @@ GameObject:
   - component: {fileID: 7288583758475133681}
   - component: {fileID: 7288583758475133686}
   - component: {fileID: 7288583758475133687}
+  - component: {fileID: 1718434091803621776}
   m_Layer: 0
   m_Name: Pie izquierdo
   m_TagString: PuppetPart
@@ -895,6 +961,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.5524702}
   m_EdgeRadius: 0
+--- !u!114 &1718434091803621776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583758475133685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583758761452937
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +987,7 @@ GameObject:
   - component: {fileID: 7288583758761452933}
   - component: {fileID: 7288583758761452938}
   - component: {fileID: 7288583758761452939}
+  - component: {fileID: 1694754162524926070}
   m_Layer: 0
   m_Name: Pie derecho
   m_TagString: PuppetPart
@@ -1065,6 +1144,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.5524702}
   m_EdgeRadius: 0
+--- !u!114 &1694754162524926070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583758761452937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583758762869999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1169,7 @@ GameObject:
   - component: {fileID: 8896629908334862712}
   - component: {fileID: 7288583758762869993}
   - component: {fileID: 7288583758762869998}
+  - component: {fileID: 8090852985813140790}
   m_Layer: 0
   m_Name: cabeza
   m_TagString: PuppetPart
@@ -1208,6 +1300,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.67
+--- !u!114 &8090852985813140790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583758762869999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583758913944056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1325,7 @@ GameObject:
   - component: {fileID: 7288583758913944059}
   - component: {fileID: 7288583758913944053}
   - component: {fileID: 7288583758913944058}
+  - component: {fileID: 8212979332922837466}
   m_Layer: 0
   m_Name: brazo izq
   m_TagString: PuppetPart
@@ -1351,6 +1456,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &8212979332922837466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583758913944056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7288583759059750949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1597,7 @@ GameObject:
   - component: {fileID: 7288583759259832047}
   - component: {fileID: 7288583759259832044}
   - component: {fileID: 7288583759259832045}
+  - component: {fileID: 5707922418379565341}
   m_Layer: 0
   m_Name: mano der
   m_TagString: PuppetPart
@@ -1610,3 +1728,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.75, y: 1.16}
   m_Direction: 0
+--- !u!114 &5707922418379565341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288583759259831955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712b214fcac389b49a917cdd5ea8b148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
