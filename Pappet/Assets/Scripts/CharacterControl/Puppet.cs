@@ -28,7 +28,9 @@ public class Puppet : MonoBehaviour
     }
     [Range(0.1f, 5.0f)]
     public float maxLegFlexTime;
-    [Range(1000.0f, 9999.0f)]
+    [Range(1000.0f, 2000.0f)]
+    public float minJumpForce;
+    [Range(1000.0f, 10000.0f)]
     public float maxJumpForce;
 
     GameObject[] bodyParts;
@@ -185,6 +187,7 @@ public class Puppet : MonoBehaviour
         */
         Vector2 jumpDir = new Vector2(-y, x);
         float totalJumpForce = maxJumpForce * rotPercentage;
+        if(totalJumpForce < minJumpForce) { totalJumpForce = minJumpForce; }
         rb_torso.AddForce(jumpDir * totalJumpForce);
     }
     void ActiveMuscles()
