@@ -32,6 +32,8 @@ public class Puppet : MonoBehaviour
     public float minJumpForce;
     [Range(1000.0f, 10000.0f)]
     public float maxJumpForce;
+    [Range(0.0f, 100.0f)]
+    public float horizontalForce;
 
     GameObject[] bodyParts;
     public Muscle[] muscles;
@@ -62,7 +64,9 @@ public class Puppet : MonoBehaviour
         while(keepMoving)
         {
             //MOVIMIENTO HORIZONTAL
+            Rigidbody2D rb_torso = bodyParts[(int)BodyParts.TORSO].GetComponent<Rigidbody2D>();
             float horiz = Input.GetAxis("Horizontal");
+            Vector3 horizontalDir = new Vector3(1,0,0);
             if (horiz > 0.0f)
             {
                 FlexRight();
@@ -75,6 +79,11 @@ public class Puppet : MonoBehaviour
             {
                 RelaxTargetMuscles(new[]{(int)BodyParts.TORSO, (int)BodyParts.BRAZO_IZ,
                 (int)BodyParts.BRAZO_DER, (int)BodyParts.MANO_IZ, (int)BodyParts.MANO_DER});
+            }
+            if (!IsGrounded())
+            {
+                float f = horizontalForce * horiz;
+                rb_torso.AddForce(horizontalDir * f);
             }
             yield return null;
         }
