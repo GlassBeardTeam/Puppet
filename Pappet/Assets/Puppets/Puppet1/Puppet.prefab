@@ -1521,8 +1521,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05834bb8684152c46b6f653ce5e4ed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLegFlexTime: 0.1
+  maxLegFlexTime: 1
+  minJumpForce: 2000
   maxJumpForce: 5000
+  horizontalForce: 50
   muscles:
   - bone: {fileID: 8896629908334862712}
     restingRot: 0
