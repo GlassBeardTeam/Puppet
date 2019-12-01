@@ -9,21 +9,30 @@ public class Menu : MonoBehaviour
     string[] Player1_array = new string[] { "1 Jugador", "1 Player" };
     string[] Player2_array = new string[] { "Contacto", "Contact" };
     string[] Settings_array = new string[] { "Opciones", "Settings" };
-    //string[] Language_array = new string[] { "Español", "English" };
-    string[] Back_array = new string[] { "Volver", "Back" };
+    string[] Language_array = new string[] { "Español", "English" };
+    //string[] Back_array = new string[] { "Volver", "Back" };
     string[] Contact_array = new string[] { "Contacto", "Contact" };
+    string[] Cinta_array = new string[] { "Compra tus\nentradas!!", "Get your\ntickets!!" };
+    string[] Level_array = new string[] { "Nivel", "Level" };
+    string[] Sala_array = new string[] { "Sala", "Room" };
     public static int val_language = 0;
     public Text text_1Player;
     public Text text_2Player;
     public Text text_Settings_menu;
     public Text text_Settings_settings;
-    public Text text_back;
-    public Text text_back2;
+    //public Text text_back;
+    //public Text text_back2;
+    //public Text text_back3;
     public Text text_contact;
-    public void PlayGame()
+    public Text text_cinta;
+    public Text text_Lvl1;
+    public Text text_Lvl2;
+    public Text text_Lvl3;
+    public Text text_sala;
+
+    public void PlayGame(int scene)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(scene);
     }
 
     public void change_language()
@@ -38,8 +47,11 @@ public class Menu : MonoBehaviour
         text_2Player.text = Player2_array[val_language];
         text_Settings_menu.text = Settings_array[val_language];
         text_Settings_settings.text = Settings_array[val_language];
-        text_back.text = Back_array[val_language];
-        text_back2.text = Back_array[val_language];
         text_contact.text = Contact_array[val_language];
+        text_cinta.text = Cinta_array[val_language];
+        text_Lvl1.text = Level_array[val_language];
+        text_Lvl2.text = Level_array[val_language];
+        text_Lvl3.text = Level_array[val_language];
+        text_sala.text = Sala_array[val_language];
     }
 }
