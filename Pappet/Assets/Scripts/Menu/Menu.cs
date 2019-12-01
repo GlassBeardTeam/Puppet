@@ -15,6 +15,9 @@ public class Menu : MonoBehaviour
     string[] Cinta_array = new string[] { "Compra tus\nentradas!!", "Get your\ntickets!!" };
     string[] Level_array = new string[] { "Nivel", "Level" };
     string[] Sala_array = new string[] { "Sala", "Room" };
+    string[] Music_array = new string[] { "Musica", "Music" };
+    string[] Effect_array = new string[] { "Efectos", "Effects" };
+    string[] Present_array = new string[] { "Presenta", "Presents" };
     public static int val_language = 0;
     public Text text_1Player;
     public Text text_2Player;
@@ -29,6 +32,9 @@ public class Menu : MonoBehaviour
     public Text text_Lvl2;
     public Text text_Lvl3;
     public Text text_sala;
+    public Text text_music;
+    public Text text_effect;
+    public Text text_present;
 
     public void PlayGame(int scene)
     {
@@ -53,5 +59,8 @@ public class Menu : MonoBehaviour
         text_Lvl2.text = Level_array[val_language];
         text_Lvl3.text = Level_array[val_language];
         text_sala.text = Sala_array[val_language];
+        text_music.text = Music_array[val_language];
+        text_effect.text = Effect_array[val_language];
+        text_present.text = Present_array[val_language];
     }
 }
