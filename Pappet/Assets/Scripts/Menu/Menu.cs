@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
     string[] Sala_array = new string[] { "Sala", "Room" };
     string[] Music_array = new string[] { "Musica", "Music" };
     string[] Effect_array = new string[] { "Efectos", "Effects" };
-    string[] Present_array = new string[] { "Presenta", "Presents" };
+    string[] Present_array = new string[] { "Presenta:", "Presents:" };
     public static int val_language = 0;
     public Text text_1Player;
     public Text text_2Player;
@@ -35,10 +35,19 @@ public class Menu : MonoBehaviour
     public Text text_music;
     public Text text_effect;
     public Text text_present;
+    //Boton idiomas
+    public Sprite Flag1;
+    public Sprite Flag2;
+    public Button btn_language;
+    public Sprite[] ImageFlag_array;
 
     public void PlayGame(int scene)
     {
         SceneManager.LoadScene(scene);
+    }
+    public void Start()
+    {
+        ImageFlag_array = new Sprite[] { Flag1, Flag2 };
     }
 
     public void change_language()
@@ -48,7 +57,9 @@ public class Menu : MonoBehaviour
         {
             val_language = 0;
         }
-        Debug.Log(Player1_array.Length);
+
+        //btn_language.GetComponent<Image>().sprite =  Resources.Load<Sprite>("Assets/Items/flagUK");
+        btn_language.GetComponent<Image>().sprite = ImageFlag_array[val_language];
         text_1Player.text = Player1_array[val_language];
         text_2Player.text = Player2_array[val_language];
         text_Settings_menu.text = Settings_array[val_language];
