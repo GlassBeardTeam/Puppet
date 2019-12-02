@@ -35,7 +35,7 @@ public class Puppet : MonoBehaviour
     [Range(0.0f, 100.0f)]
     public float horizontalForce;
 
-     public GameObject[] bodyParts;
+    GameObject[] bodyParts;
     public Muscle[] muscles;
     private Vector2[] initLocalPositions;
     //Grounded variables
@@ -84,7 +84,6 @@ public class Puppet : MonoBehaviour
             {
                 float f = horizontalForce * horiz;
                 rb_torso.AddForce(horizontalDir * f);
-                //rb_torso.velocity = horizontalDir * f;
             }
             yield return null;
         }

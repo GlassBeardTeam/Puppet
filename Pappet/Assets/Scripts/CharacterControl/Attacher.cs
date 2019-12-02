@@ -27,10 +27,6 @@ public class Attacher : MonoBehaviour
             container.GetComponent<RespawnController>().die();
         }
         
-        if(collision.gameObject.layer == 9)
-        {
-
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
