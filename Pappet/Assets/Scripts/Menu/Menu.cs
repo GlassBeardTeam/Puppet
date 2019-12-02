@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    string[] Player1_array = new string[] { "1 Jugador", "1 Player" };
+    string[] Player1_array = new string[] { "Jugar", "Play" };
     string[] Player2_array = new string[] { "Contacto", "Contact" };
     string[] Settings_array = new string[] { "Opciones", "Settings" };
     string[] Language_array = new string[] { "Español", "English" };

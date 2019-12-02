@@ -49,6 +49,10 @@ public class GameController : MonoBehaviour
     {
         gears++;
         door.GetComponent<DoorScript>().showGear();
+        if (gears >= 3)
+        {
+            door.GetComponent<DoorScript>().locked = false;
+        }
     }
 
     public void addCoil()

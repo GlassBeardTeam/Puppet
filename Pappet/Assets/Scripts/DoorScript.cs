@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
+
 public class DoorScript : MonoBehaviour
 {
     Stack<GameObject> gears = new Stack<GameObject>();
+    public bool locked = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,13 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
         
+    }
+   private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "PuppetPart" && !locked)
+        {
+                SceneManager.LoadScene(0);
+        }
     }
 
     public void showGear()
