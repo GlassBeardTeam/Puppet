@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\Menu\SetVolume.cs" />
     <Compile Include="Assets\Scripts\SpringPlatform.cs" />
+    <None Include="Assets\Fonts\Chelsea_Market\OFL.txt" />
+    <None Include="Assets\Fonts\Rye\OFL.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/4lvar/Documents/GitHub/Puppet/Pappet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
