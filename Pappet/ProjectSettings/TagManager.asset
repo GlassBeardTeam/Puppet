@@ -6,6 +6,7 @@ TagManager:
   tags:
   - checkpoint
   - door
+  - PuppetPart
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - harmful
-  - 
+  - Spring
   - 
   - 
   - 
