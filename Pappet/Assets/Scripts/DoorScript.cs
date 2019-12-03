@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "PuppetPart" && !locked)
         {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
         }
     }
 

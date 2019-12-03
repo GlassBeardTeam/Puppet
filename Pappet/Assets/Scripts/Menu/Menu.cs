@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     string[] Language_array = new string[] { "Español", "English" };
     //string[] Back_array = new string[] { "Volver", "Back" };
     string[] Contact_array = new string[] { "Contacto", "Contact" };
-    string[] Cinta_array = new string[] { "Compra tus\nentradas!!", "Get your\ntickets!!" };
+    string[] Cinta_array = new string[] { "Coge tu\nentrada!!", "Get your\nticket!!" };
     string[] Level_array = new string[] { "Nivel", "Level" };
     string[] Sala_array = new string[] { "Sala", "Room" };
     string[] Music_array = new string[] { "Musica", "Music" };
@@ -41,10 +41,17 @@ public class Menu : MonoBehaviour
     public Button btn_language;
     public Sprite[] ImageFlag_array;
 
+    public void change_scene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    /*
     public void PlayGame(int scene)
     {
         SceneManager.LoadScene(scene);
     }
+    */
     public void Start()
     {
         ImageFlag_array = new Sprite[] { Flag1, Flag2 };
