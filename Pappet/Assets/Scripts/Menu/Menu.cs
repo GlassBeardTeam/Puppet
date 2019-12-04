@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
     string[] Sala_array = new string[] { "Sala", "Room" };
     string[] Music_array = new string[] { "Musica", "Music" };
     string[] Effect_array = new string[] { "Efectos", "Effects" };
-    string[] Present_array = new string[] { "Glassbeard Team presenta:", "Glassbeard Team presents:" };
+    string[] Present_array = new string[] { "presenta:", "presents:" };
     string[] Language_array = new string[] { "Idioma", "Language" };
     string[] Vestuario_array = new string[] { "Vestuario", "Dressing room" };
     public static int val_language;
