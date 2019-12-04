@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 enum BodyParts
 {
@@ -37,6 +39,9 @@ public class Puppet : MonoBehaviour
 
      public GameObject[] bodyParts;
     public Muscle[] muscles;
+
+    MenuController stickerMenuController;
+
     private Vector2[] initLocalPositions;
     //Grounded variables
     private bool isGrounded = true;
@@ -45,8 +50,13 @@ public class Puppet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
+        stickerMenuController = Instantiate(prefab) as MenuController;
+
         instance_ = this;
         SetBodyParts();
+        setStickers();
         Ignore_torso_hands_collision();
         Ignore_FeetBodyCollisions();
         StartCoroutine(VerticalMovement());
@@ -245,6 +255,18 @@ public class Puppet : MonoBehaviour
         for (int i = 0; i< bodyParts.Length; i++)
         {
             bodyParts[i] = this.transform.GetChild(i).gameObject;
+        }
+    }
+
+    void setStickers()
+    {
+        for(int i = 0; i < bodyParts.Length; i++)
+        {
+            Texture2D tex = stickerMenuController.stickerDict[(Pieza)i][PlayerPrefs.GetInt(i.ToString())];
+            bodyParts[i].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(tex,
+                                                                                    new Rect(0, 0, tex.width, tex.height),
+                                                                                    new Vector2(0.5f, 0.5f),
+                                                                                    100);
         }
     }
 

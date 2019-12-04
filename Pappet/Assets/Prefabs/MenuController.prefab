@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 389727290695121587}
   m_Layer: 0
   m_Name: MenuController
-  m_TagString: Untagged
+  m_TagString: CustomizationController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88bd96919896d014bb724d772d084610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puppet: {fileID: 0}
   grid: {fileID: 0}
   group: {fileID: 2516028993891140677, guid: 03c0f17dc9086b9498ed78db1a4405a7, type: 3}
   button: {fileID: 752486600489902585, guid: 0bde8e2057fbc954c96d804876ab002c, type: 3}

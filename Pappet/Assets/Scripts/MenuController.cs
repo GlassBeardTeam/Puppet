@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public enum Pieza
@@ -39,9 +40,43 @@ public class MenuController : MonoBehaviour
     public Texture2D[] PieIzqStickers;
     public Texture2D[] PieDerStickers;
 
-    Dictionary<Pieza, Texture2D[]> stickerDict = new Dictionary<Pieza, Texture2D[]>();
+    public Dictionary<Pieza, Texture2D[]> stickerDict = new Dictionary<Pieza, Texture2D[]>();
 
     public Texture2D[] CabezaStickers;
+    private void Awake()
+    {
+
+        stickerDict.Add(Pieza.CABEZA, CabezaStickers);
+        stickerDict.Add(Pieza.TORSO, TorsoStickers);
+        stickerDict.Add(Pieza.BRAZOIZQ, BrazoIzqStickers);
+        stickerDict.Add(Pieza.BRAZODER, BrazoDerStickers);
+        stickerDict.Add(Pieza.MANOIZQ, ManoIzqStickers);
+        stickerDict.Add(Pieza.MANODER, ManoDerStickers);
+        stickerDict.Add(Pieza.PIERNAIZQ, PiernaIzqStickers);
+        stickerDict.Add(Pieza.PIERNADER, PiernaDerStickers);
+        stickerDict.Add(Pieza.PIEIZQ, PieIzqStickers);
+        stickerDict.Add(Pieza.PIEDER, PieIzqStickers);
+
+        if (grid != null)
+        {
+            showAll();
+        }
+
+        if (puppet != null)
+        {
+            //Ponemos al puppet con las pegatinas que deberia tener
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.CABEZA, 0).ToString()), (int)Pieza.CABEZA);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.TORSO, 0).ToString()), (int)Pieza.TORSO);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZOIZQ, 0).ToString()), (int)Pieza.BRAZOIZQ);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZODER, 0).ToString()), (int)Pieza.BRAZODER);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANOIZQ, 0).ToString()), (int)Pieza.MANOIZQ);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANODER, 0).ToString()), (int)Pieza.MANODER);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNAIZQ, 0).ToString()), (int)Pieza.PIERNAIZQ);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNADER, 0).ToString()), (int)Pieza.PIERNADER);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEIZQ, 0).ToString()), (int)Pieza.PIEIZQ);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEDER, 0).ToString()), (int)Pieza.PIEDER);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -56,30 +91,6 @@ public class MenuController : MonoBehaviour
         //PieIzqStickers = AssetDatabase.LoadAllAssetsAtPath("Assets/Puppets/Puppet1/Customization/Stickers");
         //PieIzqStickers = AssetDatabase.LoadAllAssetsAtPath("Assets/Puppets/Puppet1/Customization/Stickers");
 
-        stickerDict.Add(Pieza.CABEZA, CabezaStickers);
-        stickerDict.Add(Pieza.TORSO, TorsoStickers);
-        stickerDict.Add(Pieza.BRAZOIZQ, BrazoIzqStickers);
-        stickerDict.Add(Pieza.BRAZODER, BrazoDerStickers);
-        stickerDict.Add(Pieza.MANOIZQ, ManoIzqStickers);
-        stickerDict.Add(Pieza.MANODER, ManoDerStickers);
-        stickerDict.Add(Pieza.PIERNAIZQ, PiernaIzqStickers);
-        stickerDict.Add(Pieza.PIERNADER, PiernaDerStickers);
-        stickerDict.Add(Pieza.PIEIZQ, PieIzqStickers);
-        stickerDict.Add(Pieza.PIEDER, PieIzqStickers);
-
-        showAll();
-
-        //Ponemos al puppet con las pegatinas que deberia tener
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.CABEZA, 0).ToString()), (int)Pieza.CABEZA);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.TORSO, 0).ToString()), (int)Pieza.TORSO);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZOIZQ, 0).ToString()), (int)Pieza.BRAZOIZQ);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZODER, 0).ToString()), (int)Pieza.BRAZODER);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANOIZQ, 0).ToString()), (int)Pieza.MANOIZQ);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANODER, 0).ToString()), (int)Pieza.MANODER);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNAIZQ, 0).ToString()), (int)Pieza.PIERNAIZQ);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNADER, 0).ToString()), (int)Pieza.PIERNADER);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEIZQ, 0).ToString()), (int)Pieza.PIEIZQ);
-        selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEDER, 0).ToString()), (int)Pieza.PIEDER);
     }
 
     // Update is called once per frame
@@ -166,5 +177,9 @@ public class MenuController : MonoBehaviour
                                                         new Vector2(0.5f, 0.5f),
                                                         40);
         PlayerPrefs.SetInt(pieza.ToString(), setIndex);
+    }
+     public void volver()
+    {
+        SceneManager.LoadScene(0);
     }
 }
