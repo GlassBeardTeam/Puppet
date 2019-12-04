@@ -11,9 +11,10 @@ public class Menu_selector : MonoBehaviour
     string[] Level_array = new string[] { "Nivel", "Level" };
     string[] Sala_array = new string[] { "Sala", "Room" };
     string[] Time_array = new string[] { "Tiempo", "Time" };
-    int[] Minutes_array;
+    /*int[] Minutes_array;
     int[] Sec_array;
-    int[] Tenth_array;
+    int[] Tenth_array;*/
+    int[] times_array;
 
     public Text text_Lvl1;
     public Text text_Lvl2;
@@ -33,10 +34,10 @@ public class Menu_selector : MonoBehaviour
 
     void Start()
     {
-
-        Minutes_array = new int[] { PlayerPrefs.GetInt("tiempo1_1_min", 0), PlayerPrefs.GetInt("tiempo1_2_min", 0), PlayerPrefs.GetInt("tiempo1_3_min", 0), PlayerPrefs.GetInt("tiempo2_1_min", 0), PlayerPrefs.GetInt("tiempo2_2_min", 0), PlayerPrefs.GetInt("tiempo2_3_min", 0), PlayerPrefs.GetInt("tiempo3_1_min", 0), PlayerPrefs.GetInt("tiempo3_2_min", 0), PlayerPrefs.GetInt("tiempo3_3_min", 0) };
+        /*Minutes_array = new int[] { PlayerPrefs.GetInt("tiempo1_1_min", 0), PlayerPrefs.GetInt("tiempo1_2_min", 0), PlayerPrefs.GetInt("tiempo1_3_min", 0), PlayerPrefs.GetInt("tiempo2_1_min", 0), PlayerPrefs.GetInt("tiempo2_2_min", 0), PlayerPrefs.GetInt("tiempo2_3_min", 0), PlayerPrefs.GetInt("tiempo3_1_min", 0), PlayerPrefs.GetInt("tiempo3_2_min", 0), PlayerPrefs.GetInt("tiempo3_3_min", 0) };
         Sec_array = new int[] { PlayerPrefs.GetInt("tiempo1_1_sec", 0), PlayerPrefs.GetInt("tiempo1_2_sec", 0), PlayerPrefs.GetInt("tiempo1_3_sec", 0), PlayerPrefs.GetInt("tiempo2_1_sec", 0), PlayerPrefs.GetInt("tiempo2_2_sec", 0), PlayerPrefs.GetInt("tiempo2_3_sec", 0), PlayerPrefs.GetInt("tiempo3_1_sec", 0), PlayerPrefs.GetInt("tiempo3_2_sec", 0), PlayerPrefs.GetInt("tiempo3_3_sec", 0) };
-        Tenth_array = new int[] { (int)PlayerPrefs.GetFloat("tiempo1_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo1_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo1_3_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_3_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_3_ten", 0) };
+        Tenth_array = new int[] { (int)PlayerPrefs.GetFloat("tiempo1_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo1_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo1_3_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo2_3_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_1_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_2_ten", 0), (int)PlayerPrefs.GetFloat("tiempo3_3_ten", 0) };*/
+        times_array = new int[] { PlayerPrefs.GetInt("tiempo1_1", 0), PlayerPrefs.GetInt("tiempo1_2", 0), PlayerPrefs.GetInt("tiempo1_3", 0), PlayerPrefs.GetInt("tiempo2_1", 0), PlayerPrefs.GetInt("tiempo2_2", 0), PlayerPrefs.GetInt("tiempo2_3", 0), PlayerPrefs.GetInt("tiempo3_1", 0), PlayerPrefs.GetInt("tiempo3_2", 0), PlayerPrefs.GetInt("tiempo3_3", 0) };
 
         val_language = PlayerPrefs.GetInt("Idioma", 0);
         change_text();
@@ -54,6 +55,7 @@ public class Menu_selector : MonoBehaviour
 
     public void change_text()
     {
+        int min, sec, ten;
         text_Lvl1.text = Level_array[val_language];
         text_Lvl2.text = Level_array[val_language];
         text_Lvl3.text = Level_array[val_language];
@@ -62,13 +64,16 @@ public class Menu_selector : MonoBehaviour
 
         for (int i=0;i<9;i++)
         {
-            if (Minutes_array[i]==0 && Sec_array[i]==0 && Tenth_array[i]==0)
+            if (times_array[i]==0)
             {
                 Text_times[i].text = "";
             }
             else
-            {               
-                Text_times[i].text = Minutes_array[i].ToString("00") + ":" + Sec_array[i].ToString("00") + ":" + Tenth_array[i].ToString("00");
+            {
+                min = times_array[i] / (60 * 100);
+                sec = (times_array[i] - (min*(60 * 100)))/100;
+                ten = (times_array[i] - (min * (60 * 100)) - (sec * 100));
+                Text_times[i].text = min.ToString("00") + ":" + sec.ToString("00") + ":" + ten.ToString("00");
             }
         }
     }
