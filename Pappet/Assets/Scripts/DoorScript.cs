@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
+
+    public GameController gameController;
+
     Stack<GameObject> gears = new Stack<GameObject>();
     public bool locked = true;
     // Start is called before the first frame update
@@ -28,7 +31,7 @@ public class DoorScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "PuppetPart" && !locked)
         {
-            SceneManager.LoadScene(5);
+            gameController.closeTelon();
         }
     }
 
