@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Bajar_puente.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\Attacher.cs" />
     <Compile Include="Assets\Scripts\CharacterControl\JumpController.cs" />
@@ -73,12 +74,16 @@
     <Compile Include="Assets\Scripts\CollectibleCoil.cs" />
     <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Menu\end_game.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu_selector.cs" />
     <Compile Include="Assets\Scripts\Menu\SetVolume.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\SpringPlatform.cs" />
     <Compile Include="Assets\Scripts\StickerIndexer.cs" />
+    <Compile Include="Assets\Scripts\Subir_compuerta.cs" />
+    <Compile Include="Assets\Scripts\Subir_puente.cs" />
+    <Compile Include="Assets\Scripts\Subir_puente2.cs" />
     <None Include="Assets\Fonts\Chelsea_Market\OFL.txt" />
     <None Include="Assets\Fonts\Rye\OFL.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

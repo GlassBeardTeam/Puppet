@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 
     public Text coilText;
     public Text timerText;
+    public int Level;
 
     GameObject door;
 
@@ -21,6 +22,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("level_play", Level);
+
         gears = 0;
         coil = 0;
         door = GameObject.FindGameObjectWithTag("door");
@@ -43,6 +46,7 @@ public class GameController : MonoBehaviour
         tenths += Time.deltaTime * 100;
 
         timerText.text = "" + minutes + " : " + seconds + " : " + (int)tenths;
+        PlayerPrefs.SetInt("tiempo_act", minutes*600+seconds*100+ (int)tenths);
     }
 
     public void addGear()
