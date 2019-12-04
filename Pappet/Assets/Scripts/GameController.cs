@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
             tenths += Time.deltaTime * 100;
 
         timerText.text = "" + minutes + " : " + seconds + " : " + (int)tenths;
-        PlayerPrefs.SetInt("tiempo_act", minutes*600+seconds*100+ (int)tenths);
+        PlayerPrefs.SetInt("tiempo_act", minutes*6000+seconds*100+ (int)tenths);
     }
 
     public void addGear()
