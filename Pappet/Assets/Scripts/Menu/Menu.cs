@@ -114,4 +114,12 @@ public class Menu : MonoBehaviour
             effect.Play();
         }
     }
+
+    public void pressButton()
+    {
+        if (!effect.isPlaying)
+        {
+            effect.Play();
+        }
+    }
 }
