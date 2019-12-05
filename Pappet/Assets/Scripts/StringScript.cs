@@ -15,6 +15,6 @@ public class StringScript : MonoBehaviour
     void Update()
     {
         line.SetPosition(0, transform.parent.position);
-        line.SetPosition(1, new Vector2(transform.parent.position.x *0.7f, line.GetPosition(1).y));
+        line.SetPosition(1, new Vector2(transform.parent.position.x + Mathf.Clamp(transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity.x * 1.5f, -5, 5), line.GetPosition(1).y));
     }
 }

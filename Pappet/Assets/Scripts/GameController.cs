@@ -84,6 +84,7 @@ public class GameController : MonoBehaviour
     public void endGame()
     {
         SceneManager.LoadScene(5);
+        PlayerPrefs.SetInt("coil", PlayerPrefs.GetInt("coil", 0) + PlayerPrefs.GetInt("coil_level"));
     }
 
     public int getTenths()

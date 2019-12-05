@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -137,7 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b81877b380d514fa8216307c7f3023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuController: {fileID: 389727290695121587, guid: 460eb3e72f502644a925cd2ebebc1581,
-    type: 3}
   SetIndex: 0
   PartIndex: 0

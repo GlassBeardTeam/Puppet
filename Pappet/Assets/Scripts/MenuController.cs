@@ -2,6 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
+using SaveData;
+
 
 
 public enum Pieza
@@ -22,6 +27,8 @@ public enum Pieza
 public class MenuController : MonoBehaviour
 {
 
+    public CartelEndGame cartel;
+
     public GameObject puppet;
 
     public GridLayoutGroup grid;
@@ -30,6 +37,7 @@ public class MenuController : MonoBehaviour
 
     public Button button;
 
+    public Texture2D[] CabezaStickers;
     public Texture2D[] TorsoStickers;
     public Texture2D[] BrazoIzqStickers;
     public Texture2D[] BrazoDerStickers;
@@ -42,9 +50,14 @@ public class MenuController : MonoBehaviour
 
     public Dictionary<Pieza, Texture2D[]> stickerDict = new Dictionary<Pieza, Texture2D[]>();
 
-    public Texture2D[] CabezaStickers;
+    StickerData stickerData;
+
+    int PRICE = 10;
+
     private void Awake()
     {
+        Load();
+
 
         stickerDict.Add(Pieza.CABEZA, CabezaStickers);
         stickerDict.Add(Pieza.TORSO, TorsoStickers);
@@ -65,16 +78,16 @@ public class MenuController : MonoBehaviour
         if (puppet != null)
         {
             //Ponemos al puppet con las pegatinas que deberia tener
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.CABEZA, 0).ToString()), (int)Pieza.CABEZA);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.TORSO, 0).ToString()), (int)Pieza.TORSO);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZOIZQ, 0).ToString()), (int)Pieza.BRAZOIZQ);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZODER, 0).ToString()), (int)Pieza.BRAZODER);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANOIZQ, 0).ToString()), (int)Pieza.MANOIZQ);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANODER, 0).ToString()), (int)Pieza.MANODER);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNAIZQ, 0).ToString()), (int)Pieza.PIERNAIZQ);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNADER, 0).ToString()), (int)Pieza.PIERNADER);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEIZQ, 0).ToString()), (int)Pieza.PIEIZQ);
-            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEDER, 0).ToString()), (int)Pieza.PIEDER);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.CABEZA).ToString(), 0), (int)Pieza.CABEZA, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.TORSO).ToString(), 0), (int)Pieza.TORSO, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZOIZQ).ToString(), 0), (int)Pieza.BRAZOIZQ, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.BRAZODER).ToString(), 0), (int)Pieza.BRAZODER, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANOIZQ).ToString(), 0), (int)Pieza.MANOIZQ, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.MANODER).ToString(), 0), (int)Pieza.MANODER, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNAIZQ).ToString(), 0), (int)Pieza.PIERNAIZQ, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIERNADER).ToString(), 0), (int)Pieza.PIERNADER, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEIZQ).ToString(), 0), (int)Pieza.PIEIZQ, false);
+            selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEDER).ToString(), 0), (int)Pieza.PIEDER, false);
         }
     }
     // Start is called before the first frame update
@@ -90,6 +103,8 @@ public class MenuController : MonoBehaviour
         //PiernaDerStickers = AssetDatabase.LoadAllAssetsAtPath("Assets/Puppets/Puppet1/Customization/Stickers");
         //PieIzqStickers = AssetDatabase.LoadAllAssetsAtPath("Assets/Puppets/Puppet1/Customization/Stickers");
         //PieIzqStickers = AssetDatabase.LoadAllAssetsAtPath("Assets/Puppets/Puppet1/Customization/Stickers");
+
+
 
     }
 
@@ -138,15 +153,25 @@ public class MenuController : MonoBehaviour
         Sprite sprite = Sprite.Create(tex,
         new Rect(0, 0, tex.width, tex.height),
         new Vector2(0.5f, 0.5f),
-        100);
+        140);
         buttonInstance.GetComponent<Image>().sprite = sprite;
         buttonInstance.GetComponent<Image>().SetNativeSize();
         buttonInstance.GetComponent<StickerIndexer>().SetIndex = setIndex;
         buttonInstance.GetComponent<StickerIndexer>().PartIndex = pieza;
+        buttonInstance.GetComponent<StickerIndexer>().Locked = stickerData.isLocked(pieza, setIndex);
+        if (stickerData.isLocked(pieza, setIndex))
+        {
+            buttonInstance.GetComponent<Image>().color = Color.black;
+        }
+        else
+        {
+            buttonInstance.GetComponent<Image>().color = Color.white;
+        }
     }
 
     private void addToGrid(int pieza, int setIndex, Texture2D tex)
     {
+        
         Button buttonInstance = Instantiate(button, grid.transform) as Button;
         buttonInstance.GetComponent<Image>().sprite = Sprite.Create(tex,
         new Rect(0, 0, tex.width, tex.height),
@@ -154,6 +179,15 @@ public class MenuController : MonoBehaviour
         40);
         buttonInstance.GetComponent<StickerIndexer>().SetIndex = setIndex;
         buttonInstance.GetComponent<StickerIndexer>().PartIndex = pieza;
+        buttonInstance.GetComponent<StickerIndexer>().Locked = stickerData.isLocked(pieza, setIndex);
+        if (stickerData.isLocked(pieza, setIndex))
+        {
+            buttonInstance.GetComponent<Image>().color = Color.black;
+        }
+        else
+        {
+            buttonInstance.GetComponent<Image>().color = Color.white;
+        }
     }
 
     private void clearGrid()
@@ -169,17 +203,60 @@ public class MenuController : MonoBehaviour
         showSet((Pieza)pieza);
 
     }
-    public void selectSticker(int setIndex, int pieza)
+    public bool selectSticker(int setIndex, int pieza, bool locked)
     {
+        if (locked) {
+            int coil = PlayerPrefs.GetInt("coil", 0);
+            if(coil >= PRICE)
+            {
+                PlayerPrefs.SetInt("coil", coil - PRICE);
+                cartel.updateText();
+                stickerData.unlockSticker(pieza, setIndex);
+                Save();
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
         Texture2D tex = stickerDict[(Pieza)pieza][setIndex];
         puppet.transform.GetChild(pieza).GetComponent<Image>().sprite = Sprite.Create(tex,
                                                         new Rect(0, 0, tex.width, tex.height),
                                                         new Vector2(0.5f, 0.5f),
                                                         40);
         PlayerPrefs.SetInt(pieza.ToString(), setIndex);
+
+        return true;
+
     }
      public void volver()
     {
         SceneManager.LoadScene(0);
+        Save();
+    }
+
+    public void Load()
+    {
+        if (File.Exists(Application.persistentDataPath + "/stickers.gd"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/stickers.gd", FileMode.Open);
+            stickerData = (StickerData)bf.Deserialize(file);
+            file.Close();
+        }
+        else
+        {
+            stickerData = new StickerData(CabezaStickers.Length);
+        }
+
+    }
+    public void Save()
+    {
+            BinaryFormatter bf = new BinaryFormatter();
+            //Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
+            FileStream file = File.Create(Application.persistentDataPath + "/stickers.gd"); //you can call it anything you want
+            bf.Serialize(file, stickerData);
+            file.Close();
     }
 }
