@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
 
+    //Audios
+
+    AudioSource Colect1;
+    AudioSource Colect2;
+
     public Text coilText;
     public Text timerText;
     public TelonScript telon;
@@ -26,6 +31,12 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Colect1 = GameObject.FindGameObjectWithTag("Col1Effect").GetComponent<AudioSource>();
+        Colect2 = GameObject.FindGameObjectWithTag("Col2Effect").GetComponent<AudioSource>();
+
+        Colect1.volume = PlayerPrefs.GetFloat("Volumen", 1.0f);
+        Colect2.volume = PlayerPrefs.GetFloat("Volumen", 1.0f);
+
         PlayerPrefs.SetInt("level_play", Level);
         PlayerPrefs.SetInt("coil_level", 0);
         gears = 0;
@@ -62,6 +73,10 @@ public class GameController : MonoBehaviour
         {
             door.GetComponent<DoorScript>().locked = false;
         }
+        if (!Colect1.isPlaying)
+        {
+            Colect1.Play();
+        }
     }
 
     public void addCoil()
@@ -69,6 +84,10 @@ public class GameController : MonoBehaviour
         coil += 5;
         coilText.text = coil.ToString();
         PlayerPrefs.SetInt("coil_level", coil);
+        if (!Colect2.isPlaying)
+        {
+            Colect2.Play();
+        }
     }
 
     public void startCounter()

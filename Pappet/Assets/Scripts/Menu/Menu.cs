@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public Slider Slider_Effects;
+    public AudioSource audio;
+    public AudioSource effect;
     string[] Player1_array = new string[] { "Jugar", "Play" };
     string[] Player2_array = new string[] { "Contacto", "Contact" };
     string[] Settings_array = new string[] { "Opciones", "Settings" };
@@ -44,6 +47,7 @@ public class Menu : MonoBehaviour
     public Sprite Flag2;
     public Button btn_language;
     public Sprite[] ImageFlag_array;
+    private static bool musica_iniciada=false;
 
     public void change_scene(int scene)
     {
@@ -58,6 +62,12 @@ public class Menu : MonoBehaviour
     */
     public void Start()
     {
+        PlayerPrefs.SetFloat("Volumen", 1.0f);
+        if (!musica_iniciada)
+        {
+            audio.Play(0);
+            musica_iniciada = true;
+        }
         ImageFlag_array = new Sprite[] { Flag1, Flag2 };
         val_language = PlayerPrefs.GetInt("Idioma",0);
         change_text();
@@ -93,5 +103,15 @@ public class Menu : MonoBehaviour
         text_present.text = Present_array[val_language];
         text_language.text = Language_array[val_language];
         text_vestuario.text = Vestuario_array[val_language];
+    }
+
+    public void change_volume()
+    {
+        PlayerPrefs.SetFloat("Volumen", Slider_Effects.value);
+        effect.volume = Slider_Effects.value;
+        if (!effect.isPlaying)
+        {
+            effect.Play();
+        }
     }
 }

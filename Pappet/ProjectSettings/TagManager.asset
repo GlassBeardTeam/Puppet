@@ -8,6 +8,11 @@ TagManager:
   - door
   - PuppetPart
   - CustomizationController
+  - DeathEffect
+  - GoalEffect
+  - ReviveEffect
+  - Col1Effect
+  - Col2Effect
   layers:
   - Default
   - TransparentFX

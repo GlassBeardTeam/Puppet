@@ -9,12 +9,30 @@ public class CollectibleCoil : MonoBehaviour
     float currentAnimationTime = 0;
     float animationTime = 0.5f;
 
+    [Range(0.1f, 10.0f)]
+    public float speed = 1.0f;
+    [Range(0.1f, 10.0f)]
+    public float Amplitud = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(Movement());
     }
 
+    IEnumerator Movement()
+    {
+        float x = 0.0f;
+        float initYPos = this.transform.position.y;
+        while (true)
+        {
+            x += Time.deltaTime;
+            float sin = Amplitud *Mathf.Sin(x * speed);
+            Vector3 currentPos = this.transform.position;
+            currentPos.y = initYPos + sin;
+            this.transform.position = currentPos;
+            yield return null;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

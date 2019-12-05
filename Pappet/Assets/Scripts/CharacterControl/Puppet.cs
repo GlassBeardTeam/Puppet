@@ -37,7 +37,11 @@ public class Puppet : MonoBehaviour
     [Range(0.0f, 100.0f)]
     public float horizontalForce;
 
-     public GameObject[] bodyParts;
+    public TouchControls inputHandler;
+    private float horizontalInput;
+    private float verticalInput;
+
+    public GameObject[] bodyParts;
     public Muscle[] muscles;
 
     MenuController stickerMenuController;
@@ -74,8 +78,9 @@ public class Puppet : MonoBehaviour
         while(keepMoving)
         {
             //MOVIMIENTO HORIZONTAL
+            horizontalInput = inputHandler.horizontalInput;
             Rigidbody2D rb_torso = bodyParts[(int)BodyParts.TORSO].GetComponent<Rigidbody2D>();
-            float horiz = Input.GetAxis("Horizontal");
+            float horiz = Mathf.Clamp(Input.GetAxis("Horizontal") + horizontalInput, -1, 1);
             Vector3 horizontalDir = new Vector3(1,0,0);
             if (horiz > 0.0f)
             {
@@ -125,7 +130,8 @@ public class Puppet : MonoBehaviour
         while (keepMoving)
         {
             //MOVIMIENTO VERTICAL
-            float vert = Input.GetAxis("Vertical");
+            verticalInput = inputHandler.verticalInput;
+            float vert = Mathf.Clamp(Input.GetAxis("Vertical") + verticalInput, -1, 1);
             if (vert < 0.0f)
             {
                 flexedTime += Time.deltaTime;
