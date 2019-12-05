@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
+    
+    AudioSource GoalEffect;
 
     public GameController gameController;
 
@@ -15,6 +17,9 @@ public class DoorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GoalEffect = GameObject.FindGameObjectWithTag("GoalEffect").GetComponent<AudioSource>();
+        GoalEffect.volume = PlayerPrefs.GetFloat("Volumen", 1.0f);
+
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(false);
@@ -31,6 +36,10 @@ public class DoorScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "PuppetPart" && !locked)
         {
+            if (!GoalEffect.isPlaying)
+            {
+                GoalEffect.Play();
+            }
             gameController.closeTelon();
         }
     }
