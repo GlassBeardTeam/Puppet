@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public AudioSource audio;
     string[] Player1_array = new string[] { "Jugar", "Play" };
     string[] Player2_array = new string[] { "Contacto", "Contact" };
     string[] Settings_array = new string[] { "Opciones", "Settings" };
@@ -44,6 +45,7 @@ public class Menu : MonoBehaviour
     public Sprite Flag2;
     public Button btn_language;
     public Sprite[] ImageFlag_array;
+    private static bool musica_iniciada=false;
 
     public void change_scene(int scene)
     {
@@ -58,6 +60,11 @@ public class Menu : MonoBehaviour
     */
     public void Start()
     {
+        if (!musica_iniciada)
+        {
+            audio.Play(0);
+            musica_iniciada = true;
+        }
         ImageFlag_array = new Sprite[] { Flag1, Flag2 };
         val_language = PlayerPrefs.GetInt("Idioma",0);
         change_text();
