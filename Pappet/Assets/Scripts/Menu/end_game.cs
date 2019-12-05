@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class end_game : MonoBehaviour
 {
     public static int val_language;
-    string[] Score_array = new string[] { "Puntuacion", "Score" };
+    string[] Score_array = new string[] { "Puntuación", "Score" };
     public Text text_Score;
     public Text text_time;
+    public Text text_numCoils;
     public int[] times_array;
     public string[] times_prefs;
 
@@ -17,17 +18,17 @@ public class end_game : MonoBehaviour
     void Start()
     {
         times_array = new int[] { PlayerPrefs.GetInt("tiempo1_1", 0), PlayerPrefs.GetInt("tiempo1_2", 0), PlayerPrefs.GetInt("tiempo1_3", 0), PlayerPrefs.GetInt("tiempo2_1", 0), PlayerPrefs.GetInt("tiempo2_2", 0), PlayerPrefs.GetInt("tiempo2_3", 0), PlayerPrefs.GetInt("tiempo3_1", 0), PlayerPrefs.GetInt("tiempo3_2", 0), PlayerPrefs.GetInt("tiempo3_3", 0) };
-        times_prefs = new string[] { "tiempo1_1", "tiempo1_2", "tiempo1_3", "tiempo2_1", "tiempo2_2", "tiempo2_3", "tiempo3_1", "tiempo3_2", "tiempo3_3"};
+        times_prefs = new string[] { "tiempo1_1", "tiempo1_2", "tiempo1_3", "tiempo2_1", "tiempo2_2", "tiempo2_3", "tiempo3_1", "tiempo3_2", "tiempo3_3" };
 
         int tiempo_aux2, tiempo_aux = 0;
-        bool usado=false;
+        bool usado = false;
 
         //Actualiza array del ranking
-        if (!(PlayerPrefs.GetInt("tiempo_act",-1) == -1))
+        if (!(PlayerPrefs.GetInt("tiempo_act", -1) == -1))
         {
             for (int i = 0; i < times_array.Length; i++)//Recorre los arrays de tiempos
             {
-                if ((i / 3)+1 == PlayerPrefs.GetInt("level_play", -1))//Selecciona las posiciones a mirar, 3 es el numero de puntuaciones guardadas
+                if ((i / 3) + 1 == PlayerPrefs.GetInt("level_play", -1))//Selecciona las posiciones a mirar, 3 es el numero de puntuaciones guardadas
                 {
                     if (times_array[i] > PlayerPrefs.GetInt("tiempo_act") && (tiempo_aux == 0))
                     {
@@ -54,6 +55,12 @@ public class end_game : MonoBehaviour
         {
             PlayerPrefs.SetInt(times_prefs[i], times_array[i]);
         }
+
+        //Actualiza los numeros de bobinas del jugador
+        int player_coils = PlayerPrefs.GetInt("coil_player", 0);
+        player_coils += PlayerPrefs.GetInt("coil_level", 0);
+        PlayerPrefs.SetInt("coil_player", player_coils);
+
         val_language = PlayerPrefs.GetInt("Idioma", 0);
         change_text();
     }
@@ -62,8 +69,14 @@ public class end_game : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void vestuario()
+    {
+        SceneManager.LoadScene(6);
+    }
+
     public void change_text()
     {
+        text_numCoils.text = "+" + PlayerPrefs.GetInt("coil_level", 0);
         text_Score.text = Score_array[val_language];
         int min = PlayerPrefs.GetInt("tiempo_act") / (60 * 100);
         int sec = (PlayerPrefs.GetInt("tiempo_act") - (min * (60 * 100))) / 100;
@@ -71,4 +84,3 @@ public class end_game : MonoBehaviour
         text_time.text = min.ToString("00") + ":" + sec.ToString("00") + ":" + ten.ToString("00");
     }
 }
- 

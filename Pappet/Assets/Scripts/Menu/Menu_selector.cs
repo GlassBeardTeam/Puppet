@@ -20,7 +20,9 @@ public class Menu_selector : MonoBehaviour
     public Text text_Lvl2;
     public Text text_Lvl3;
     public Text text_sala;
-    public Text text_time;
+    public Text text_time1;
+    public Text text_time2;
+    public Text text_time3;
     public Text[] Text_times /*= new Text[9]*/;
     /*public Text text_tiempo1_1;
     public Text text_tiempo1_2;
@@ -60,7 +62,9 @@ public class Menu_selector : MonoBehaviour
         text_Lvl2.text = Level_array[val_language];
         text_Lvl3.text = Level_array[val_language];
         text_sala.text = Sala_array[val_language];
-        text_time.text = Time_array[val_language];
+        text_time1.text = Time_array[val_language];
+        text_time2.text = Time_array[val_language];
+        text_time3.text = Time_array[val_language];
 
         for (int i=0;i<9;i++)
         {
