@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RespawnController : MonoBehaviour
 {
 
     public Transform puppetPrefab;
-
+    public TouchControls inputHandler;
     bool isDead = false;
     GameObject lastCheckpoint;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void setLastCheckpoint(GameObject checkpoint)
@@ -47,6 +48,7 @@ public class RespawnController : MonoBehaviour
 
             GameObject instance = Instantiate(puppetPrefab, transform.position, transform.rotation).gameObject;
             instance.transform.parent = transform;
+            instance.GetComponent<Puppet>().inputHandler = inputHandler;
 
             Debug.Log("Respawn");
 
