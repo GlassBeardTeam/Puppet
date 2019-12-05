@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("level_play", Level);
-
+        PlayerPrefs.SetInt("coil_level", 0);
         gears = 0;
         coil = 0;
         door = GameObject.FindGameObjectWithTag("door");
@@ -68,6 +68,7 @@ public class GameController : MonoBehaviour
     {
         coil += 5;
         coilText.text = coil.ToString();
+        PlayerPrefs.SetInt("coil_level", coil);
     }
 
     public void startCounter()

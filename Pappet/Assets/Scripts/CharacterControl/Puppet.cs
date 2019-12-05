@@ -228,7 +228,7 @@ public class Puppet : MonoBehaviour
         }
     }
 
-    void FlexRight()
+    public void FlexRight()
     {
         muscles[(int)BodyParts.BRAZO_DER].isFlexed = true;
         muscles[(int)BodyParts.MANO_DER].isFlexed = true;
@@ -238,7 +238,7 @@ public class Puppet : MonoBehaviour
         muscles[(int)BodyParts.TORSO].flexedRot = -Mathf.Abs(flexedRot);
     }
 
-    void FlexLeft()
+    public void FlexLeft()
     {
         muscles[(int)BodyParts.BRAZO_IZ].isFlexed = true;
         muscles[(int)BodyParts.MANO_IZ].isFlexed = true;
