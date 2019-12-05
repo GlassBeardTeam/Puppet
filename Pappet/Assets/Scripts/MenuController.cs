@@ -210,9 +210,6 @@ public class MenuController : MonoBehaviour
             int coil = PlayerPrefs.GetInt("coil", 0);
             if(coil >= PRICE)
             {
-                int x = (Screen.width / 2);
-                int y = (Screen.height / 2);
-                EditorUtility.DisplayPopupMenu(new Rect(x,y, 0, 0), "Assets/", null);
                 PlayerPrefs.SetInt("coil", coil - PRICE);
                 cartel.updateText();
                 stickerData.unlockSticker(pieza, setIndex);

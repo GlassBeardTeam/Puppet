@@ -1023,8 +1023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.11, y: -181.69}
-  m_SizeDelta: {x: 754.33, y: 104.4}
+  m_AnchoredPosition: {x: -0.67, y: -189.2}
+  m_SizeDelta: {x: 805.53, y: 121.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508359935
 MonoBehaviour:
@@ -1053,9 +1053,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 604f6a099e8bc4a40980693ce53de90b,
+    m_HighlightedSprite: {fileID: 21300000, guid: a2f6d1e25712405439da3495e186466e,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 136eb66164fb9c84db6125bff4af3584, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8e6b534f8befa964ea6861e80234e195, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: e97869cbe74ebb7438933acdb50fca29, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1100,6 +1100,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1092752117}
+        m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &508359936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,7 +1129,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b7faed7a5370d934bb0079669606f3b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a481a9c571d31845b9661f94b5c5918, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1554,8 +1565,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.11, y: 6.67}
-  m_SizeDelta: {x: 754.33, y: 104.4}
+  m_AnchoredPosition: {x: -0.67, y: 0.21}
+  m_SizeDelta: {x: 805.53, y: 121.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892241384
 MonoBehaviour:
@@ -1584,9 +1595,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 604f6a099e8bc4a40980693ce53de90b,
+    m_HighlightedSprite: {fileID: 21300000, guid: 4634d67acf4c5d2479ce85a37786b1e5,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 136eb66164fb9c84db6125bff4af3584, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 83eede74deda4fe42be880f7acbf59db, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: e97869cbe74ebb7438933acdb50fca29, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1609,6 +1620,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1092752117}
+        m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892241385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,7 +1649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b7faed7a5370d934bb0079669606f3b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0d52afe17fd14046a841b1fddf495f1, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2477,8 +2499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35.59, y: 1}
-  m_SizeDelta: {x: -35.39, y: -4.4}
+  m_AnchoredPosition: {x: -42.13, y: 11}
+  m_SizeDelta: {x: -486.53, y: 9.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287420818
 MonoBehaviour:
@@ -2502,7 +2524,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: ed26521c1de19da409a180614a1e9870, type: 3}
     m_FontSize: 63
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 81
     m_Alignment: 4
@@ -2814,8 +2836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -34.5, y: 1}
-  m_SizeDelta: {x: -426.97, y: 8.1}
+  m_AnchoredPosition: {x: -41.81, y: 8.4}
+  m_SizeDelta: {x: -483.98, y: -25.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1448615054
 CanvasRenderer:
@@ -2845,7 +2867,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ed26521c1de19da409a180614a1e9870, type: 3}
-    m_FontSize: 49
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -2930,8 +2952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.11, y: -84.52}
-  m_SizeDelta: {x: 754.33, y: 104.4}
+  m_AnchoredPosition: {x: -0.67, y: -93.73}
+  m_SizeDelta: {x: 805.53, y: 121.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529314663
 MonoBehaviour:
@@ -2960,9 +2982,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 604f6a099e8bc4a40980693ce53de90b,
+    m_HighlightedSprite: {fileID: 21300000, guid: 2f53c1c583b2c6b4c8688c465f282e32,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 136eb66164fb9c84db6125bff4af3584, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 307949d914122764ba9fff74c717278e, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: e97869cbe74ebb7438933acdb50fca29, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2985,6 +3007,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1092752117}
+        m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1529314664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,7 +3036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b7faed7a5370d934bb0079669606f3b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db20de4c7d078e74890090ddffffb7e3, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3094,8 +3127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -32, y: 2}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -41.76, y: 6.6}
+  m_SizeDelta: {x: -480.88, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590353096
 MonoBehaviour:
@@ -3119,7 +3152,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: ed26521c1de19da409a180614a1e9870, type: 3}
     m_FontSize: 63
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 6
     m_MaxSize: 81
     m_Alignment: 4
@@ -3147,6 +3180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1677583634}
   - component: {fileID: 1677583633}
+  - component: {fileID: 1677583635}
   m_Layer: 0
   m_Name: RomperTicket
   m_TagString: Untagged
@@ -3264,6 +3298,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677583635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677583632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81315371efcdf7242b8ce247b04808ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677585332
 GameObject:
   m_ObjectHideFlags: 0
