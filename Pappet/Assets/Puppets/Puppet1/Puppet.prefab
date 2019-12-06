@@ -2314,6 +2314,7 @@ MonoBehaviour:
     isFlexed: 0
   stickerMenuController: {fileID: 1601866827252482678, guid: 460eb3e72f502644a925cd2ebebc1581,
     type: 3}
+  prefab: {fileID: 389727290695121587, guid: 460eb3e72f502644a925cd2ebebc1581, type: 3}
 --- !u!1 &7288583759259831955
 GameObject:
   m_ObjectHideFlags: 0

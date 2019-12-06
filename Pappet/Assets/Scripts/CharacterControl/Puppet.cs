@@ -44,7 +44,8 @@ public class Puppet : MonoBehaviour
     public GameObject[] bodyParts;
     public Muscle[] muscles;
 
-    public MenuController stickerMenuController;
+    MenuController stickerMenuController;
+    [SerializeField] private MenuController prefab;
 
     private Vector2[] initLocalPositions;
     //Grounded variables
