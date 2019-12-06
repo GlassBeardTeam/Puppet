@@ -228,9 +228,10 @@ public class MenuController : MonoBehaviour
     public void unlockSticker(StickerIndexer sticker)
     {
         int coil = PlayerPrefs.GetInt("coil", 0);
-        PlayerPrefs.SetInt("coil" , coil - PRICE);
+        PlayerPrefs.SetInt("coil", coil - PRICE);
         cartel.updateText();
-        stickerData.unlockSticker(sticker.PartIndex, sticker.SetIndex);
+        stickerData.unlockSticker(sticker.SetIndex, sticker.PartIndex);
+        sticker.Locked = false;
         sticker.show();
         Save();
     }
@@ -266,7 +267,7 @@ public class MenuController : MonoBehaviour
 
     public void openConfirmationPanel(StickerIndexer sticker)
     {
-        int coil = PlayerPrefs.GetInt("coil", 0);
+        int coil = 100;//PlayerPrefs.GetInt("coil", 0);
         if (coil >= PRICE)
         {
             confirmationPanel.SetActive(true);

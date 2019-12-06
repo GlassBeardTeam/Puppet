@@ -26,7 +26,7 @@ namespace SaveData
             stickerData[set][part] = true;
         }
 
-        public void unlockSticker(int part, int set)
+        public void unlockSticker(int set, int part)
         {
             stickerData[set][part] = false;
         }
