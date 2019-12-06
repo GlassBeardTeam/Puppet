@@ -13,6 +13,8 @@ TagManager:
   - ReviveEffect
   - Col1Effect
   - Col2Effect
+  - ConfirmationPanel
+  - Canvas
   layers:
   - Default
   - TransparentFX

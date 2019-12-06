@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using SaveData;
+using System.Collections.Generic;
 using System.IO;
-
-using SaveData;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 
@@ -38,6 +36,9 @@ public class MenuController : MonoBehaviour
 
     public Button button;
 
+    public GameObject confirmationPanel;
+
+
     public Texture2D[] CabezaStickers;
     public Texture2D[] TorsoStickers;
     public Texture2D[] BrazoIzqStickers;
@@ -55,9 +56,12 @@ public class MenuController : MonoBehaviour
 
     int PRICE = 10;
 
+
     private void Awake()
     {
         Load();
+
+        confirmationPanel.SetActive(false);
 
 
         stickerDict.Add(Pieza.CABEZA, CabezaStickers);
@@ -90,6 +94,7 @@ public class MenuController : MonoBehaviour
             selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEIZQ).ToString(), 0), (int)Pieza.PIEIZQ, false);
             selectSticker(PlayerPrefs.GetInt(((int)Pieza.PIEDER).ToString(), 0), (int)Pieza.PIEDER, false);
         }
+
     }
     // Start is called before the first frame update
     void Start()
@@ -107,6 +112,7 @@ public class MenuController : MonoBehaviour
 
 
 
+
     }
 
     // Update is called once per frame
@@ -118,8 +124,8 @@ public class MenuController : MonoBehaviour
     public void showSet(Pieza pieza)
     {
         clearGrid();
-        
-        for(int i = 0; i < stickerDict[pieza].Length; i++)
+
+        for (int i = 0; i < stickerDict[pieza].Length; i++)
         {
             addToGrid((int)pieza, i, stickerDict[pieza][i]);
         }
@@ -158,6 +164,7 @@ public class MenuController : MonoBehaviour
         buttonInstance.GetComponent<Image>().sprite = sprite;
         buttonInstance.GetComponent<Image>().SetNativeSize();
         buttonInstance.GetComponent<StickerIndexer>().SetIndex = setIndex;
+        buttonInstance.GetComponent<StickerIndexer>().menuController = this;
         buttonInstance.GetComponent<StickerIndexer>().PartIndex = pieza;
         buttonInstance.GetComponent<StickerIndexer>().Locked = stickerData.isLocked(pieza, setIndex);
         if (stickerData.isLocked(pieza, setIndex))
@@ -172,7 +179,7 @@ public class MenuController : MonoBehaviour
 
     private void addToGrid(int pieza, int setIndex, Texture2D tex)
     {
-        
+
         Button buttonInstance = Instantiate(button, grid.transform) as Button;
         buttonInstance.GetComponent<Image>().sprite = Sprite.Create(tex,
         new Rect(0, 0, tex.width, tex.height),
@@ -180,6 +187,7 @@ public class MenuController : MonoBehaviour
         40);
         buttonInstance.GetComponent<StickerIndexer>().SetIndex = setIndex;
         buttonInstance.GetComponent<StickerIndexer>().PartIndex = pieza;
+        buttonInstance.GetComponent<StickerIndexer>().menuController = this;
         buttonInstance.GetComponent<StickerIndexer>().Locked = stickerData.isLocked(pieza, setIndex);
         if (stickerData.isLocked(pieza, setIndex))
         {
@@ -206,32 +214,27 @@ public class MenuController : MonoBehaviour
     }
     public bool selectSticker(int setIndex, int pieza, bool locked)
     {
-        if (locked) {
-            int coil = PlayerPrefs.GetInt("coil", 0);
-            if(coil >= PRICE)
-            {
-                PlayerPrefs.SetInt("coil", coil - PRICE);
-                cartel.updateText();
-                stickerData.unlockSticker(pieza, setIndex);
-                Save();
-            }
-            else
-            {
-                return false;
-            }
-            
-        }
         Texture2D tex = stickerDict[(Pieza)pieza][setIndex];
         puppet.transform.GetChild(pieza).GetComponent<Image>().sprite = Sprite.Create(tex,
                                                         new Rect(0, 0, tex.width, tex.height),
                                                         new Vector2(0.5f, 0.5f),
                                                         40);
         PlayerPrefs.SetInt(pieza.ToString(), setIndex);
-
         return true;
 
     }
-     public void volver()
+
+    public void unlockSticker(StickerIndexer sticker)
+    {
+        int coil = PlayerPrefs.GetInt("coil", 0);
+        PlayerPrefs.SetInt("coil", coil - PRICE);
+        cartel.updateText();
+        stickerData.unlockSticker(sticker.PartIndex, sticker.SetIndex);
+        sticker.show();
+        Save();
+    }
+
+    public void volver()
     {
         SceneManager.LoadScene(0);
         Save();
@@ -254,10 +257,33 @@ public class MenuController : MonoBehaviour
     }
     public void Save()
     {
-            BinaryFormatter bf = new BinaryFormatter();
-            //Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
-            FileStream file = File.Create(Application.persistentDataPath + "/stickers.gd"); //you can call it anything you want
-            bf.Serialize(file, stickerData);
-            file.Close();
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/stickers.gd");
+        bf.Serialize(file, stickerData);
+        file.Close();
+    }
+
+    public void openConfirmationPanel(StickerIndexer sticker)
+    {
+        int coil = PlayerPrefs.GetInt("coil", 0);
+        if (coil >= PRICE)
+        {
+            confirmationPanel.SetActive(true);
+            confirmationPanel.GetComponent<ConfirmationScript>().controller = this;
+            confirmationPanel.GetComponent<ConfirmationScript>().sticker = sticker;
+        }
+
+    }
+
+    public void acceptConfirmationPanel(StickerIndexer sticker)
+    {
+        unlockSticker(sticker);
+        confirmationPanel.SetActive(false);
+
+    }
+    public void declineConfirmationPanel()
+    {
+        confirmationPanel.SetActive(false);
+
     }
 }

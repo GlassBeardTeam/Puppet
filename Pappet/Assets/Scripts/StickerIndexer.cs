@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StickerIndexer : MonoBehaviour
 {
-    MenuController menuController;
+    public MenuController menuController;
     Image image;
 
     public int SetIndex;
@@ -15,7 +15,6 @@ public class StickerIndexer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menuController = GameObject.FindGameObjectWithTag("CustomizationController").GetComponent<MenuController>();
         image = GetComponent<Image>();
     }
 
@@ -27,7 +26,18 @@ public class StickerIndexer : MonoBehaviour
 
     public void selectSticker()
     {
-        if(menuController.selectSticker(SetIndex, PartIndex, Locked))
-            image.color = Color.white;
+        if (Locked)
+        {
+            menuController.openConfirmationPanel(this);
+        }
+        else
+        {
+            menuController.selectSticker(SetIndex, PartIndex, Locked);
+        }
+    }
+
+    public void show()
+    {
+        image.color = Color.white;
     }
 }
