@@ -954,13 +954,13 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: e9ec71eaae5402f4382a3ba82a085ae5,
       type: 3}
     m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 553c257766de29b42b7faf1fc6bdea5c, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 453345480}
   m_OnClick:
     m_PersistentCalls:
@@ -1355,6 +1355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a292941c3be0043b169e91ac1ddd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButonLev1: {fileID: 1877102416}
+  ButonLev2: {fileID: 1997084399}
+  ButonLev3: {fileID: 453345479}
   text_Lvl1: {fileID: 1694993663}
   text_Lvl2: {fileID: 1026312322}
   text_Lvl3: {fileID: 1524691747}
@@ -2476,7 +2479,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: e9ec71eaae5402f4382a3ba82a085ae5,
       type: 3}
     m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 553c257766de29b42b7faf1fc6bdea5c, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2603,13 +2606,13 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: e9ec71eaae5402f4382a3ba82a085ae5,
       type: 3}
     m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 553c257766de29b42b7faf1fc6bdea5c, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1997084400}
   m_OnClick:
     m_PersistentCalls:

@@ -16,6 +16,10 @@ public class Menu_selector : MonoBehaviour
     int[] Tenth_array;*/
     int[] times_array;
 
+    [SerializeField] private Button ButonLev1; 
+    [SerializeField] private Button ButonLev2;
+    [SerializeField] private Button ButonLev3;
+
     [SerializeField] private Text text_Lvl1;
     [SerializeField] private Text text_Lvl2;
     [SerializeField] private Text text_Lvl3;
@@ -43,6 +47,15 @@ public class Menu_selector : MonoBehaviour
 
         val_language = PlayerPrefs.GetInt("Idioma", 0);
         change_text();
+
+        if (times_array[0] != 0)
+        {
+            ButonLev2.interactable = true;
+        }
+        if (times_array[3] != 0)
+        {
+            ButonLev3.interactable = true;
+        }
     }
 
     public void PlayGame(int scene)
