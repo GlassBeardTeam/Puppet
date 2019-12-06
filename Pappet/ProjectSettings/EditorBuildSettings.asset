@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/selector_nivel.unity
     guid: 1dbb313280473c8458acfbb31e279612
   - enabled: 1
-    path: Assets/Scenes/Nivel_2.unity
+    path: Assets/Scenes/Nivel_1.unity
     guid: 8ed452854abb6a242b53db1a14fb562e
   - enabled: 1
-    path: Assets/Scenes/Nivel_1.unity
-    guid: 7a6b3ad7b5628704a8a861247d4d96ee
+    path: Assets/Scenes/Nivel_2.unity
+    guid: 99db069ffb3bb06478e2b49b602d57af
   - enabled: 1
-    path: Assets/Scenes/ProbarPersonaje.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Nivel_3.unity
+    guid: 7a6b3ad7b5628704a8a861247d4d96ee
   - enabled: 1
     path: Assets/Scenes/end_game.unity
     guid: 831811432a357ef45a4e4bf1094c85c4

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public Slider Slider_Effects;
-    public AudioSource audio;
-    public AudioSource effect;
+    [SerializeField] private  Slider Slider_Effects;
+    [SerializeField] private  AudioSource audio;
+    [SerializeField] private AudioSource effect;
     string[] Player1_array = new string[] { "Jugar", "Play" };
     string[] Player2_array = new string[] { "Contacto", "Contact" };
     string[] Settings_array = new string[] { "Opciones", "Settings" };
@@ -24,29 +24,29 @@ public class Menu : MonoBehaviour
     string[] Language_array = new string[] { "Idioma", "Language" };
     string[] Vestuario_array = new string[] { "Vestuario", "Dressing room" };
     public static int val_language;
-    public Text text_1Player;
-    public Text text_Settings_menu;
-    public Text text_Settings_settings;
+    [SerializeField] private  Text text_1Player;
+    [SerializeField] private  Text text_Settings_menu;
+    [SerializeField] private Text text_Settings_settings;
     //public Text text_back;
     //public Text text_back2;
     //public Text text_back3;
-    public Text text_contact;
-    public Text text_contact2;
-    public Text text_cinta;
+    [SerializeField] private Text text_contact;
+    [SerializeField] private Text text_contact2;
+    [SerializeField] private Text text_cinta;
     //public Text text_Lvl1;
     //public Text text_Lvl2;
     //public Text text_Lvl3;
     //public Text text_sala;
-    public Text text_music;
-    public Text text_effect;
-    public Text text_present;
-    public Text text_language;
-    public Text text_vestuario;
+    [SerializeField] private Text text_music;
+    [SerializeField] private Text text_effect;
+    [SerializeField] private Text text_present;
+    [SerializeField] private Text text_language;
+    [SerializeField] private Text text_vestuario;
     //Boton idiomas
-    public Sprite Flag1;
-    public Sprite Flag2;
-    public Button btn_language;
-    public Sprite[] ImageFlag_array;
+    [SerializeField] private Sprite Flag1;
+    [SerializeField] private Sprite Flag2;
+    [SerializeField] private Button btn_language;
+    [SerializeField] private Sprite[] ImageFlag_array;
     private static bool musica_iniciada=false;
 
     public void change_scene(int scene)
@@ -121,5 +121,9 @@ public class Menu : MonoBehaviour
         {
             effect.Play();
         }
+    }
+    public void open_web(string web)
+    {
+        Application.OpenURL(web);
     }
 }

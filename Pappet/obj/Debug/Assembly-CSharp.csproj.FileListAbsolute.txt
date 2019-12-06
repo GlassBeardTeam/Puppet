@@ -956,3 +956,5 @@ E:\Escritorio\Puppet - copia\Pappet\obj\Debug\Assembly-CSharp.csproj.CoreCompile
 E:\Escritorio\Puppet - copia\Pappet\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Escritorio\Puppet - copia\Pappet\obj\Debug\Assembly-CSharp.dll
 E:\Escritorio\Puppet - copia\Pappet\obj\Debug\Assembly-CSharp.pdb
+E:\Escritorio\Puppet - copia\Pappet\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+E:\Escritorio\Puppet - copia\Pappet\Temp\bin\Debug\UnityEngine.WebGLModule.dll

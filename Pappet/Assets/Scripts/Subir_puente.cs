@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Subir_puente : MonoBehaviour
 {
-    public GameObject puenteIz;
-    public GameObject puenteDer;
+    [SerializeField] private GameObject puenteIz;
+    [SerializeField] private GameObject puenteDer;
     private Rigidbody2D rb2dIzq;
     private HingeJoint2D jointRefIzq;
     private JointMotor2D motorRefIzq;

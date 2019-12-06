@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bajar_puente : MonoBehaviour
 {
-    public GameObject puenteIz;
-    public GameObject puenteDer;
+    [SerializeField] private GameObject puenteIz;
+    [SerializeField] private GameObject puenteDer;
     private HingeJoint2D jointRefIzq;
     private JointMotor2D motorRefIzq;
     private JointAngleLimits2D LimitRefIzq;

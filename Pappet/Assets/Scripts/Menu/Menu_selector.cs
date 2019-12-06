@@ -16,14 +16,14 @@ public class Menu_selector : MonoBehaviour
     int[] Tenth_array;*/
     int[] times_array;
 
-    public Text text_Lvl1;
-    public Text text_Lvl2;
-    public Text text_Lvl3;
-    public Text text_sala;
-    public Text text_time1;
-    public Text text_time2;
-    public Text text_time3;
-    public Text[] Text_times /*= new Text[9]*/;
+    [SerializeField] private Text text_Lvl1;
+    [SerializeField] private Text text_Lvl2;
+    [SerializeField] private Text text_Lvl3;
+    [SerializeField] private Text text_sala;
+    [SerializeField] private Text text_time1;
+    [SerializeField] private Text text_time2;
+    [SerializeField] private Text text_time3;
+    [SerializeField] private Text[] Text_times /*= new Text[9]*/;
     /*public Text text_tiempo1_1;
     public Text text_tiempo1_2;
     public Text text_tiempo1_3;
