@@ -45,6 +45,7 @@ public class Puppet : MonoBehaviour
     public Muscle[] muscles;
 
     MenuController stickerMenuController;
+    [SerializeField] private MenuController prefab;
 
     private Vector2[] initLocalPositions;
     //Grounded variables
@@ -55,7 +56,7 @@ public class Puppet : MonoBehaviour
     void Start()
     {
 
-        Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
+        //Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
         stickerMenuController = Instantiate(prefab) as MenuController;
 
         instance_ = this;
