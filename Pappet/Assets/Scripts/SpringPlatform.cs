@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpringPlatform : MonoBehaviour
 {
+    AudioSource SpringEffect;
     GameObject bouncer;
 
     public float multiplier;
@@ -22,6 +23,9 @@ public class SpringPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpringEffect = GameObject.FindGameObjectWithTag("bounceEffect").GetComponent<AudioSource>();
+        SpringEffect.volume = PlayerPrefs.GetFloat("Volumen", 1.0f);
+
         anim = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         initHeight = transform.position.y;
@@ -55,6 +59,10 @@ public class SpringPlatform : MonoBehaviour
         //rb.AddForce(new Vector2(0, 2000));
         if (onTop)
         {
+            if (!SpringEffect.isPlaying)
+            {
+                SpringEffect.Play();
+            }
             anim.SetBool("isStepped", true);
             if(collision.gameObject.tag == "PuppetPart")
             {

@@ -9,6 +9,7 @@ public class DoorScript : MonoBehaviour
 {
     
     AudioSource GoalEffect;
+    private bool endLevel = false;
 
     public GameController gameController;
 
@@ -36,9 +37,10 @@ public class DoorScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "PuppetPart" && !locked)
         {
-            if (!GoalEffect.isPlaying)
+            if (!GoalEffect.isPlaying && !endLevel)
             {
                 GoalEffect.Play();
+                endLevel = true;
             }
             gameController.closeTelon();
         }

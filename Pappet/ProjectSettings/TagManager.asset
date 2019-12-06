@@ -15,6 +15,7 @@ TagManager:
   - Col2Effect
   - ConfirmationPanel
   - Canvas
+  - bounceEffect
   layers:
   - Default
   - TransparentFX
