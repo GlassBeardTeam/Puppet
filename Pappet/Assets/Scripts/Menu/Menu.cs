@@ -122,4 +122,8 @@ public class Menu : MonoBehaviour
             effect.Play();
         }
     }
+    public void open_web(string web)
+    {
+        Application.OpenURL(web);
+    }
 }
