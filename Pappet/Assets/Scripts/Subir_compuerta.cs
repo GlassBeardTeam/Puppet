@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Subir_compuerta : MonoBehaviour
 {
-    public GameObject compuerta;
+    [SerializeField] private GameObject compuerta;
     private HingeJoint2D jointRef;
     private JointMotor2D motorRef;
     private JointAngleLimits2D LimitRef;

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class controlador_auto_personaje : MonoBehaviour
 {
-    public Puppet Personaje;
-    public float period;
-    public float nextActionTime;
-    public float ActionDuration;
-    public float endActionTime;
-    public float endActionNext;
-    public float time;
+    [SerializeField] private Puppet Personaje;
+    [SerializeField] private float period;
+    [SerializeField] private float nextActionTime;
+    [SerializeField] private float ActionDuration;
+    [SerializeField] private float endActionTime;
+    [SerializeField] private float endActionNext;
+    [SerializeField] private float time;
     int nextmove;
     // Start is called before the first frame update
     void Start()

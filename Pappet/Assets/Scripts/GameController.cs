@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public Text coilText;
     public Text timerText;
     public TelonScript telon;
-    public int Level;
+    [SerializeField] private int Level;
 
     GameObject door;
 

@@ -8,11 +8,11 @@ public class end_game : MonoBehaviour
 {
     public static int val_language;
     string[] Score_array = new string[] { "Puntuación", "Score" };
-    public Text text_Score;
-    public Text text_time;
-    public Text text_numCoils;
-    public int[] times_array;
-    public string[] times_prefs;
+    [SerializeField] private Text text_Score;
+    [SerializeField] private Text text_time;
+    [SerializeField] private Text text_numCoils;
+    [SerializeField] private int[] times_array;
+    [SerializeField] private string[] times_prefs;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +57,7 @@ public class end_game : MonoBehaviour
         }
 
         //Actualiza los numeros de bobinas del jugador
-        int player_coils = PlayerPrefs.GetInt("coil_player", 0);
+        int player_coils = PlayerPrefs.GetInt("coil", 0);
         player_coils += PlayerPrefs.GetInt("coil_level", 0);
         PlayerPrefs.SetInt("coil_player", player_coils);
 
@@ -76,7 +76,7 @@ public class end_game : MonoBehaviour
 
     public void change_text()
     {
-        text_numCoils.text = "+" + PlayerPrefs.GetInt("coil_level", 0);
+        text_numCoils.text = "+" + PlayerPrefs.GetInt("coil_level", 0) + " = " + PlayerPrefs.GetInt("coil", 0);
         text_Score.text = Score_array[val_language];
         int min = PlayerPrefs.GetInt("tiempo_act") / (60 * 100);
         int sec = (PlayerPrefs.GetInt("tiempo_act") - (min * (60 * 100))) / 100;
