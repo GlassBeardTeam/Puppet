@@ -2249,6 +2249,7 @@ MonoBehaviour:
   minJumpForce: 2000
   maxJumpForce: 5000
   horizontalForce: 50
+  inputHandler: {fileID: 0}
   bodyParts: []
   muscles:
   - bone: {fileID: 8896629908334862712}
@@ -2311,6 +2312,8 @@ MonoBehaviour:
     flexedRot: 0
     flexForce: 0
     isFlexed: 0
+  stickerMenuController: {fileID: 1601866827252482678, guid: 460eb3e72f502644a925cd2ebebc1581,
+    type: 3}
 --- !u!1 &7288583759259831955
 GameObject:
   m_ObjectHideFlags: 0

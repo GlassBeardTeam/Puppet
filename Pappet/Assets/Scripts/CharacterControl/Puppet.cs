@@ -44,7 +44,7 @@ public class Puppet : MonoBehaviour
     public GameObject[] bodyParts;
     public Muscle[] muscles;
 
-    MenuController stickerMenuController;
+    public MenuController stickerMenuController;
 
     private Vector2[] initLocalPositions;
     //Grounded variables
@@ -54,7 +54,6 @@ public class Puppet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
         stickerMenuController = Instantiate(prefab) as MenuController;
 

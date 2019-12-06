@@ -3637,6 +3637,11 @@ PrefabInstance:
       propertyPath: confirmationPanel
       value: 
       objectReference: {fileID: 2266786568709423171}
+    - target: {fileID: 1601866827252482678, guid: 460eb3e72f502644a925cd2ebebc1581,
+        type: 3}
+      propertyPath: ConfirmationPanel
+      value: 
+      objectReference: {fileID: 2266786568709423171}
     - target: {fileID: 1601866827252482677, guid: 460eb3e72f502644a925cd2ebebc1581,
         type: 3}
       propertyPath: m_LocalPosition.x
