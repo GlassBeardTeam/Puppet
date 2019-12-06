@@ -55,7 +55,7 @@ public class Puppet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
+        //Object prefab = UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/MenuController.prefab", typeof(MenuController));
         stickerMenuController = Instantiate(prefab) as MenuController;
 
         instance_ = this;
