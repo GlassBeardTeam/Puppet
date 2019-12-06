@@ -267,7 +267,7 @@ public class MenuController : MonoBehaviour
 
     public void openConfirmationPanel(StickerIndexer sticker)
     {
-        int coil = 100;//PlayerPrefs.GetInt("coil", 0);
+        int coil = PlayerPrefs.GetInt("coil", 0);
         if (coil >= PRICE)
         {
             confirmationPanel.SetActive(true);
