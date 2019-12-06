@@ -824,6 +824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puppet
       objectReference: {fileID: 0}
+    - target: {fileID: 7288583759059750951, guid: 87f8b51eb5244d842b314dce9d6ea758,
+        type: 3}
+      propertyPath: inputHandler
+      value: 
+      objectReference: {fileID: 612791641}
     - target: {fileID: 7288583759059750948, guid: 87f8b51eb5244d842b314dce9d6ea758,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,7 +837,7 @@ PrefabInstance:
     - target: {fileID: 7288583759059750948, guid: 87f8b51eb5244d842b314dce9d6ea758,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27
+      value: -31.9
       objectReference: {fileID: 0}
     - target: {fileID: 7288583759059750948, guid: 87f8b51eb5244d842b314dce9d6ea758,
         type: 3}
@@ -894,11 +899,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.392949
       objectReference: {fileID: 0}
-    - target: {fileID: 7288583759059750951, guid: 87f8b51eb5244d842b314dce9d6ea758,
-        type: 3}
-      propertyPath: inputHandler
-      value: 
-      objectReference: {fileID: 612791641}
     - target: {fileID: 7288583757381703445, guid: 87f8b51eb5244d842b314dce9d6ea758,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -1663,12 +1663,17 @@ PrefabInstance:
     - target: {fileID: 7767310928216176655, guid: 895c70c3ce14b1048961f89fb2df4abf,
         type: 3}
       propertyPath: m_FontData.m_BestFit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767310928216176655, guid: 895c70c3ce14b1048961f89fb2df4abf,
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767310928216176655, guid: 895c70c3ce14b1048961f89fb2df4abf,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7767310927505926661, guid: 895c70c3ce14b1048961f89fb2df4abf,
         type: 3}

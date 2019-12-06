@@ -124,6 +124,6 @@ public class Menu : MonoBehaviour
     }
     public void open_web(string web)
     {
-        Application.OpenURL(web);
+        Application.ExternalEval("window.open(\"" + web + "\")");
     }
 }
