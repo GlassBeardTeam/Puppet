@@ -67,10 +67,14 @@ La marioneta se controla con 3 botones:
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas3.png)
 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/controlesAire.png)
+
 Los botones podrían controlar otras articulaciones en caso de que se añadan nuevas marionetas, aunque las mecánicas básicas de rotar al personaje e impulsarse se mantendrían.
 
 ### Puntuación
 La puntuación obtenida en un nivel dependerá del tiempo que tardes en completarlo y del porcentaje de coleccionables que consigas en el mismo.
+
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Scoreboard.JPG)
 
 ### Personalización: 
 Los jugadores podrán personalizar a su marioneta escogiendo pegatinas específicas para cada parte del cuerpo (5 en total).
@@ -82,14 +86,16 @@ De esta forma, cualquiera puede obtener todas las pegatinas del juego de forma g
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Personalizar.png)
 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Vestuario.JPG)
+
 ## Interfaz
 __Menú principal__
 * Aventura
   * Selección de Nivel
     * Juego
-  * Taller: Personalización de la marioneta
+* Vestuario: Personalización de la marioneta y tienda.
 * Opciones: Volumen de sonidos, música, idioma.
-* Contacto
+  * Contacto
 
 __Juego__
 * Nivel
@@ -97,26 +103,43 @@ __Juego__
 * Engranajes conseguidos
 * Bobinas de hilo conseguidas
 
-
+Imágenes: 
+- Menú Principal:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Menu.JPG)
+- Selección de nivel:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Niveles.JPG)
+- Juego:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Nivel_2.JPG)
+- Vestuario:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Vestuario.JPG)
+- Opciones:
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Opciones.JPG)
 ## Arte
 ### Historia
-Te despiertas en un teatro de marionetas y no te queda más remedio que seguir las indicaciones del dueño, que te entrenará para que entretengas al público, hasta que te vuelves demasiado fuerte como para que pueda controlarte y decide acabar contigo.
+Te despiertas en un teatro de títeres abandonado que es llevado en la actualidad por las propias marionetas, pappets, y no te queda más remedio que seguir las indicaciones del dueño, el Pappet Master Diantre, que te realizará una serie de pruebas para decidir si te contrata y entretengas al público, hasta que te vuelves demasiado fuerte como para que pueda controlarte y decide acabar contigo.
 
 __Personajes__
 - Títere: Personaje principal que controlará el jugador durante la historia. Es una marioneta tradicional desechada por su antiguo dueño.
 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/puppet1.png)
+
 - Diantre: Una caja de payaso que será tu maestro en el juego y te guiará durante el tutorial. Su método de enseñanza es un tanto peculiar. No parará de hacer bromas con la forma de desplazarse de Títere y dará más problemas que facilidades a tu avance.
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Puppet%20Master.png)
 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/diantre.png)
 
 ### Estética
 Se ha elegido una estética cartoon, simulando recortes de cartón, con pegatinas desgastadas que se pueden ir intercambiando. Coge inspiración en los teatros de títeres para niños y niñas y en las manualidades que podrían hacer éstos y éstas en el colegio.
 
+A su vez, se sigue una temática de circo o teatro de finales de siglo XIX, con posters coloridos y desgastados.
+
 Bocetos:
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
-![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/puppet1.png)
+Pegatinas: 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/P2Cabeza.png)
 
+![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/P3cabeza.png)
 
 ### Música y Sonido
 La música debe ser animada y circense, de forma que recuerde a un teatro de marionetas.
