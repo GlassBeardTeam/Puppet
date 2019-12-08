@@ -41594,7 +41594,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueESP.sentences.Array.data[0]
       value: "\xBFPero que ven mis ojos?\n\xBFUn nuevo Pappet?\nYo soy Diantre, due\xF1o
-        de el mejor teatro de Pappets,\nen el que tienes la suerte de encontrarte."
+        del mejor teatro de Pappets,\nen el que tienes la suerte de encontrarte."
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
