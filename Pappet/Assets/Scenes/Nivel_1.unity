@@ -1368,9 +1368,9 @@ MonoBehaviour:
     sentences:
     - Wow!I beg your pardon! As you can see, the facilities got slightly deteriorated
       over time.
-    - "I have placed checkpoints in which reassemble your pieces in every room, but
-      you have to \r\npass through them to reactivate them because years have passed
-      without them been used."
+    - "I have placed checkpoints where you can reassemble your pieces in every room,
+      but you have to \r\npass through them to reactivate them because years have
+      passed without them been used."
 --- !u!61 &555798331
 BoxCollider2D:
   m_ObjectHideFlags: 0

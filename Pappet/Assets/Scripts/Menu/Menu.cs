@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     string[] Cinta_array = new string[] { "Coge tu\nentrada!!", "Get your\nticket!!" };
     string[] Level_array = new string[] { "Nivel", "Level" };
     string[] Sala_array = new string[] { "Sala", "Room" };
-    string[] Music_array = new string[] { "Musica", "Music" };
+    string[] Music_array = new string[] { "Música", "Music" };
     string[] Effect_array = new string[] { "Efectos", "Effects" };
     string[] Present_array = new string[] { "presenta:", "presents:" };
     string[] Language_array = new string[] { "Idioma", "Language" };
