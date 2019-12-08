@@ -1,0 +1,10 @@
+||Controles||
+La marioneta se controla con 3 botones:
+
+-Botón 1: Al pulsarlo se contraen las piernas, de forma que la marioneta se agacha. 
+Al soltarlo, la marioneta sale disparada en la dirección a la que apunte su cabeza. 
+Tecla S o flecha hacia abajo en PC y parte central de la pantalla en dispositivos táctiles.
+
+-Botones 2 y 3: Sirven para contraer los brazos izquierdo y derecho respectivamente. 
+Al contraer el brazo izquierdo, la marioneta rota su cuerpo hacia la derecha y viceversa. 
+Teclas A y D o Flechas Izquierda y Derecha en PC y zonas izquierda y derecha de la pantalla en dispositivos táctiles.
