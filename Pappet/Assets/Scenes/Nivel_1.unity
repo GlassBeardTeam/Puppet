@@ -1237,13 +1237,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd86f9e4b0a50b4a9edb34a0742c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Diantre
+  dialogueESP:
+    name: dialogue 2
     sentences:
-    - "\xA1Vaya! Lo siento mucho. Como puedes ver las instalaciones est\xE1n ligeramente
-      defectuosas por el paso del tiempo. "
-    - "He colocado soportes en los que recolocar tus piezas en todas las salas, pero
-      debes pasar por ellos para reactivarlos ya que llevan a\xF1os sin utilizarse.\n"
+    - "\xA1Vaya! lo siento mucho.\nComo puedes ver, las instalaciones\nest\xE1n ligeramente
+      defectuosas por el paso del tiempo."
+    - "He colocado soportes en los que \nrecolocar tus piezas\nen todas las salas,
+      pero debes pasar por ellos \npara reactivarlas ya que llevan a\xF1os sin \nutilizarse."
+  dialogueENG:
+    name: dialogue 2
+    sentences:
+    - 'Well! I beg you pardon! As you can see,
+
+      our facilities got slightly deteriorated over time.'
+    - "I have placed checkpoints in which \nyou can reassemble your pieces in every
+      room, but\nyou have to pass trhogh them to activate them\nas they havent been
+      used in years."
 --- !u!61 &555798331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41429,9 +41438,114 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
+      propertyPath: dialogueESP.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
       value: "\xBFPerd\xF3n? \xBFNo sabes desplazarte por tu cuenta? \xBFNi siquiera
         saludar? \n(No me esperaba nada de ti y ya has conseguido decepcionarme)\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.name
+      value: dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[0]
+      value: "\xBFPero que ven mis ojos?\n\xBFUn nuevo Pappet'\nYo soy Diantre, ue\xF1o
+        de l mejor teatro de Pappets,\nen el que tienes la suerte de encontrarte."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[1]
+      value: "Es cierto, hace tiempo que nadie viene a vernos.\n\xA1Pero no te equivoques!\nLa
+        falta de p\xFAblico se debe a a\xF1os de preparaci\xF3n\npara la funci\xF3n
+        de marionetas perfecta."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[2]
+      value: "\xBFC\xF3mo dices? \xBFQue quires un papel en la gran obra?\nHaz lo
+        que te digo y tendr\xE1s un huecoen nuestro teatro."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[3]
+      value: "Por ahora recoge los engranajes repartidos en cada sala\npara poder
+        acceder a la siguiente.\nUna vez te muevas con la gentileza precisa para la
+        funci\xF3n, obtendr\xE1s tu siguiente tarea..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[4]
+      value: "\xBFPerd\xF3n? \xBFNo sabes desplazarte por tu cuenta?\n\xBFNi siquiera
+        saludar?\n(No me esperaba nada de ti y ya has conseguido\ndecepcionarme)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueESP.sentences.Array.data[5]
+      value: "Gira tu torso de izquierda a derecha e imp\xFAlsate \ncon las piernas
+        en la direcci\xF3n deseada.\nEn el cartel de la pared puedes observar las
+        posturas\nesenciales."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.name
+      value: dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[0]
+      value: "I cannot believe my eyes!\nA new Pappet?\nI am Diantre, owner of the
+        ost prestigious Pappet Theater,\nin which you are lucky to find yourself.\t"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[1]
+      value: 'It is true, it has been a long time since someone espectated us.
+
+        But dont get me wrong!
+
+        The lack of audience is due to ears and years of preparation
+
+        for the perfect Puppet Show.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[2]
+      value: 'What was that?
+
+        You want a role in the Great Show?
+
+        Do as I say and you will have a spot in our theater.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[3]
+      value: "For now, collect all the gears distrbuted in each room \nin order to
+        access the next one.\nOnce you move withthe precise \ngentness for the show,\nyou
+        will be given your next task.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[4]
+      value: "Pardon me?\nYou dont now how to move on your own?\nNot even wave?\n(I
+        didn\xB4t expect anything from you and yet\nyou have managed to disappoint
+        me)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
+        type: 3}
+      propertyPath: dialogueENG.sentences.Array.data[5]
+      value: "Turn your torso from left to right and \njump in the desired direction.\nYou
+        can observe the esential poses in that signboard at the wall."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf6b16aac0d0744c9e8340bd21084bb, type: 3}

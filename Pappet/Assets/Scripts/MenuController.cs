@@ -54,7 +54,7 @@ public class MenuController : MonoBehaviour
 
     StickerData stickerData;
 
-    int PRICE = 10;
+    int PRICE = 20;
 
 
     private void Awake()
