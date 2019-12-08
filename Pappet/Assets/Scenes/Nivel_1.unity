@@ -343,6 +343,125 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6d5b40961b54e43a13c831f3a47f34, type: 3}
+--- !u!1001 &70455414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7683015216303199458, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1508d4d3c3db90f469288efbc42bbccd, type: 3}
 --- !u!1 &75322920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6515776100018979376, guid: 268df995a827f9e4296470f75447dc8f,
@@ -1238,21 +1357,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueESP:
-    name: dialogue 2
+    name: Diantre
     sentences:
     - "\xA1Vaya! lo siento mucho.\nComo puedes ver, las instalaciones\nest\xE1n ligeramente
       defectuosas por el paso del tiempo."
     - "He colocado soportes en los que \nrecolocar tus piezas\nen todas las salas,
       pero debes pasar por ellos \npara reactivarlas ya que llevan a\xF1os sin \nutilizarse."
   dialogueENG:
-    name: dialogue 2
+    name: Diantre
     sentences:
-    - 'Well! I beg you pardon! As you can see,
-
-      our facilities got slightly deteriorated over time.'
-    - "I have placed checkpoints in which \nyou can reassemble your pieces in every
-      room, but\nyou have to pass trhogh them to activate them\nas they havent been
-      used in years."
+    - Wow!I beg your pardon! As you can see, the facilities got slightly deteriorated
+      over time.
+    - "I have placed checkpoints in which reassemble your pieces in every room, but
+      you have to \r\npass through them to reactivate them because years have passed
+      without them been used."
 --- !u!61 &555798331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1291,7 +1409,7 @@ Transform:
   m_LocalScale: {x: 20, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656029838
 GameObject:
@@ -41126,6 +41244,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6805009783049911966, guid: 38a9abad58d822d48819a65639423653,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 197
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805009783049911966, guid: 38a9abad58d822d48819a65639423653,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 235
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221324926543841584, guid: 38a9abad58d822d48819a65639423653,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a9abad58d822d48819a65639423653, type: 3}
 --- !u!114 &2044314630 stripped
@@ -41419,7 +41552,7 @@ PrefabInstance:
     - target: {fileID: 5066963842130549786, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549786, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
@@ -41455,7 +41588,7 @@ PrefabInstance:
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueESP.name
-      value: dialogue1
+      value: Diantre
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
@@ -41499,172 +41632,46 @@ PrefabInstance:
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.name
-      value: dialogue1
+      value: Diantre
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[0]
-      value: "I cannot believe my eyes!\nA new Pappet?\nI am Diantre, owner of the
-        ost prestigious Pappet Theater,\nin which you are lucky to find yourself.\t"
+      value: "I cannot believe my eyes!\r\nA new Pappet?\r\nI am Diantre, owner of
+        the most prestigious Pappet Theatre,\r\nin which you are lucky to find yourself.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[1]
-      value: 'It is true, it has been a long time since someone espectated us.
-
-        But dont get me wrong!
-
-        The lack of audience is due to ears and years of preparation
-
-        for the perfect Puppet Show.'
+      value: "It is true, it's been a long time since our last great audience.\r\nBut
+        don't get me wrong!\r\nThe lack of audience is due to years of preparation
+        \r\nfor the perfect puppet show.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[2]
-      value: 'What was that?
-
-        You want a role in the Great Show?
-
-        Do as I say and you will have a spot in our theater.'
+      value: "What was that? Do you want a role in the big show?\r\nThen do what I
+        say and you will have a spot in our theatre.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[3]
-      value: "For now, collect all the gears distrbuted in each room \nin order to
-        access the next one.\nOnce you move withthe precise \ngentness for the show,\nyou
-        will be given your next task.\n"
+      value: "By now, collect all the gears distributed in each room\r\nto unlock
+        the next one.\r\nOnce you move with the precise gentleness for the show,\r\nyou
+        will get your next task...\r\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[4]
-      value: "Pardon me?\nYou dont now how to move on your own?\nNot even wave?\n(I
-        didn\xB4t expect anything from you and yet\nyou have managed to disappoint
-        me)"
+      value: "Pardon me? Don't you know how to move on your own?\r\nNot even wave?\r\n(I
+        didn't expect anything from you and yet you've managed to disappoint me)\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[5]
-      value: "Turn your torso from left to right and \njump in the desired direction.\nYou
-        can observe the esential poses in that signboard at the wall."
+      value: "Turn your torso from left to right to jump with your legs in the desired
+        direction.\r\nIn that signboard on the wall you can observe the esssential
+        postures.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf6b16aac0d0744c9e8340bd21084bb, type: 3}
---- !u!1001 &7683015216701413416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7683015216303199458, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_Name
-      value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683015216303199462, guid: 1508d4d3c3db90f469288efbc42bbccd,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1508d4d3c3db90f469288efbc42bbccd, type: 3}
