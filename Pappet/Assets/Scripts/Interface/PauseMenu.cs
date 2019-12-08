@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,9 +11,19 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    string[] Pause_array = new string[] { "Pausa", "Pause" };
+    string[] Continue_array = new string[] { "Continuar", "Continue" };
+    string[] Exit_array = new string[] { "Salir", "Exit" };
+
+    [SerializeField] private Text text_pause;
+    [SerializeField] private Text text_continue;
+    [SerializeField] private Text text_exit;
 
     private void Start()
     {
+        text_pause.text = Pause_array[PlayerPrefs.GetInt("Idioma", 0)];
+        text_continue.text = Continue_array[PlayerPrefs.GetInt("Idioma", 0)];
+        text_exit.text = Exit_array[PlayerPrefs.GetInt("Idioma", 0)];
         GameIsPaused = false;
     }
     void Update()

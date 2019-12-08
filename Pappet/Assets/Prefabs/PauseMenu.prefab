@@ -191,6 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 7683015218105437724}
+  text_pause: {fileID: 7683015217211418370}
+  text_continue: {fileID: 7683015216301173615}
+  text_exit: {fileID: 7683015217142610673}
 --- !u!1 &7683015216571139216
 GameObject:
   m_ObjectHideFlags: 0
