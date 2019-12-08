@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool GameIsPaused = false;
+    public static bool GameIsPaused;
 
     public GameObject pauseMenuUI;
 
+
+    private void Start()
+    {
+        GameIsPaused = false;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -41,6 +46,9 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitLevel()
     {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
         GameObject.Find("Musica").GetComponent<AudioSource>().Play();
         //Debug.Log("Quitting level...");
         SceneManager.LoadScene("selector_nivel");
