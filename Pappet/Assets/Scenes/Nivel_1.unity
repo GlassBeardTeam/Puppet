@@ -41606,7 +41606,7 @@ PrefabInstance:
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
         type: 3}
       propertyPath: dialogueESP.sentences.Array.data[2]
-      value: "\xBFC\xF3mo dices? \xBFQue quires un papel en la gran obra?\nHaz lo
+      value: "\xBFC\xF3mo dices? \xBFQue quieres un papel en la gran obra?\nHaz lo
         que te digo y tendr\xE1s un hueco en nuestro teatro."
       objectReference: {fileID: 0}
     - target: {fileID: 5066963842130549796, guid: 8cf6b16aac0d0744c9e8340bd21084bb,
