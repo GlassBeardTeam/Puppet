@@ -60,6 +60,7 @@ public class Menu_selector : MonoBehaviour
 
     public void PlayGame(int scene)
     {
+        GameObject.Find("Musica").GetComponent<AudioSource>().Pause();
         SceneManager.LoadScene(scene);
     }
 

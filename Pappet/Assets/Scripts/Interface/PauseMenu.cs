@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitLevel()
     {
+        GameObject.Find("Musica").GetComponent<AudioSource>().Play();
         //Debug.Log("Quitting level...");
         SceneManager.LoadScene("selector_nivel");
     }

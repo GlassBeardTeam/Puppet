@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private  Slider Slider_Effects;
+    [SerializeField] private Slider Slider_Music;
     [SerializeField] private  AudioSource audio;
     [SerializeField] private AudioSource effect;
     string[] Player1_array = new string[] { "Jugar", "Play" };
@@ -62,14 +63,17 @@ public class Menu : MonoBehaviour
     */
     public void Start()
     {
-        PlayerPrefs.SetFloat("Volumen", 1.0f);
         if (!musica_iniciada)
         {
+            PlayerPrefs.SetFloat("Volumen", 1.0f);
+            PlayerPrefs.SetFloat("Slider_music", 1.0f);
             audio.Play(0);
             musica_iniciada = true;
         }
+        Slider_Effects.value = PlayerPrefs.GetFloat("Volumen", 1.0f);
+        Slider_Music.value = PlayerPrefs.GetFloat("Slider_music", 1.0f);
         ImageFlag_array = new Sprite[] { Flag1, Flag2 };
-        val_language = PlayerPrefs.GetInt("Idioma",0);
+        val_language = PlayerPrefs.GetInt("Idioma", 0);
         change_text();
     }
 
@@ -113,6 +117,11 @@ public class Menu : MonoBehaviour
         {
             effect.Play();
         }
+    }
+
+    public void change_music()
+    {
+        PlayerPrefs.SetFloat("Slider_music", Slider_Music.value);
     }
 
     public void pressButton()

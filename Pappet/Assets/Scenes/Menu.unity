@@ -698,7 +698,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b2b8ac027d546a24b9e4a8171da5ae9c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8dda9efe39126ef43a0f8fd0197823dc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e4c49164c3fc5c64aa631595ef21293d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2456,6 +2456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider_Effects: {fileID: 1134995662}
+  Slider_Music: {fileID: 1386988129}
   audio: {fileID: 275554478}
   effect: {fileID: 1677583633}
   text_1Player: {fileID: 1287420818}
@@ -3234,6 +3235,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1386988130}
         m_MethodName: SetLevel
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1092752117}
+        m_MethodName: change_music
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -17,6 +17,8 @@ public class end_game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("Musica").GetComponent<AudioSource>().Play();
+
         times_array = new int[] { PlayerPrefs.GetInt("tiempo1_1", 0), PlayerPrefs.GetInt("tiempo1_2", 0), PlayerPrefs.GetInt("tiempo1_3", 0), PlayerPrefs.GetInt("tiempo2_1", 0), PlayerPrefs.GetInt("tiempo2_2", 0), PlayerPrefs.GetInt("tiempo2_3", 0), PlayerPrefs.GetInt("tiempo3_1", 0), PlayerPrefs.GetInt("tiempo3_2", 0), PlayerPrefs.GetInt("tiempo3_3", 0) };
         times_prefs = new string[] { "tiempo1_1", "tiempo1_2", "tiempo1_3", "tiempo2_1", "tiempo2_2", "tiempo2_3", "tiempo3_1", "tiempo3_2", "tiempo3_3" };
 
