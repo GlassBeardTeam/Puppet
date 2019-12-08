@@ -41670,7 +41670,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueENG.sentences.Array.data[5]
       value: "Turn your torso from left to right to jump with your legs in the desired
-        direction.\r\nIn that signboard on the wall you can observe the esssential
+        direction.\r\nIn that signboard on the wall you can observe the essential
         postures.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
