@@ -136,7 +136,8 @@ A su vez, se sigue una temática de circo o teatro de finales de siglo XIX, con 
 Bocetos:
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Bocetos%20Marionetas.png)
 
-Pegatinas: 
+Pegatinas:
+
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/P2Cabeza.png)
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/P3cabeza.png)
