@@ -6,7 +6,7 @@ Versión 1.0
 ### Glass Beard
 
 ![Error al cargar la imagen](https://github.com/GlassBeardTeam/Puppet/blob/master/GDD%20Images/Logo(200x200).png)
-- Adrián Poza Guillermo - Artista 
+- Adrián Poza Guillermo - Artista, programador 
 - Víctor González Rivera - Diseñador, programador
 - Álvaro Ramírez Míguez - Diseñador, programador, sonido
 - Manuel Aguado Salguero - Artista
